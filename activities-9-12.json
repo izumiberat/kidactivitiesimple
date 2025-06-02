@@ -15,7 +15,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Tape Maze Masterpiece: Engineer an epic multi-level maze with tape pathways, paper bridges, and surprise obstacles. Test your design with small toys or marbles!"
+      "title": "Tape Maze Masterpiece",
+      "description": "Engineer an epic multi-level maze with tape pathways, paper bridges, and surprise obstacles. Test your design with small toys or marbles!"
     },
     {
       "id": 9001,
@@ -32,7 +33,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Graphic Novel Adventure: Create your own comic hero! Illustrate a 3-page action story with dramatic panels, speech bubbles, and cliffhanger endings."
+      "title": "Graphic Novel Adventure",
+      "description": "Create your own comic hero! Illustrate a 3-page action story with dramatic panels, speech bubbles, and cliffhanger endings."
     },
     {
       "id": 9002,
@@ -49,7 +51,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Silent Story Challenge: Capture 5 photos that tell a mystery tale without words. Challenge friends to guess your plot from the visual clues!"
+      "title": "Silent Story Challenge",
+      "description": "Capture 5 photos that tell a mystery tale without words. Challenge friends to guess your plot from the visual clues!"
     },
     {
       "id": 9003,
@@ -66,7 +69,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Paper Tower Challenge: With just 5 sheets of paper and 12 inches of tape, build a tower that can hold a textbook! Experiment with folding techniques."
+      "title": "Paper Tower Challenge",
+      "description": "With just 5 sheets of paper and 12 inches of tape, build a tower that can hold a textbook! Experiment with folding techniques."
     },
     {
       "id": 9004,
@@ -83,7 +87,8 @@
       "energy_required": "high",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Hoop Challenge Circuit: Create a basketball skills course! Set up trick shots worth 10-50 points. Compete for the highest score!"
+      "title": "Hoop Challenge Circuit",
+      "description": "Create a basketball skills course! Set up trick shots worth 10-50 points. Compete for the highest score!"
     },
     {
       "id": 9005,
@@ -100,7 +105,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Card Game Championship: Host your own casino night! Play three different card games back-to-back while tracking cumulative scores. Can you beat your own record?"
+      "title": "Card Game Championship",
+      "description": "Host your own casino night! Play three different card games back-to-back while tracking cumulative scores. Can you beat your own record?"
     },
     {
       "id": 9006,
@@ -117,7 +123,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "multiple",
-      "text": "Escape Room Creator: Design 3 puzzle boxes with paper clues and tape locks. Challenge family to solve your mystery in under 30 minutes!"
+      "title": "Escape Room Creator",
+      "description": "Design 3 puzzle boxes with paper clues and tape locks. Challenge family to solve your mystery in under 30 minutes!"
     },
     {
       "id": 9007,
@@ -134,7 +141,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "multiple",
-      "text": "Night Explorer Quest: Hide treasures and mark their locations with flashlight signals! Create glow-in-the-dark maps for an after-dark scavenger hunt."
+      "title": "Night Explorer Quest",
+      "description": "Hide treasures and mark their locations with flashlight signals! Create glow-in-the-dark maps for an after-dark scavenger hunt."
     },
     {
       "id": 9008,
@@ -151,7 +159,8 @@
       "energy_required": "high",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Pop Star Performance: Lip sync and dance to your favorite hit! Create dramatic choreography, stage entrances, and encore-worthy finales."
+      "title": "Pop Star Performance",
+      "description": "Lip sync and dance to your favorite hit! Create dramatic choreography, stage entrances, and encore-worthy finales."
     },
     {
       "id": 9009,
@@ -168,7 +177,8 @@
       "energy_required": "high",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Backyard Olympics: Invent 5 ball sports with tape-marked courts! Award medals for bocce-basketball, dodgeball-tennis, and other hybrid games."
+      "title": "Backyard Olympics",
+      "description": "Invent 5 ball sports with tape-marked courts! Award medals for bocce-basketball, dodgeball-tennis, and other hybrid games."
     },
     {
       "id": 9010,
@@ -185,7 +195,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Mini Movie Director: Create a stop-motion film using toys! Shoot frame-by-frame adventures, then add sound effects and titles for premiere night."
+      "title": "Mini Movie Director",
+      "description": "Create a stop-motion film using toys! Shoot frame-by-frame adventures, then add sound effects and titles for premiere night."
     },
     {
       "id": 9011,
@@ -202,7 +213,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "multiple",
-      "text": "Neighborhood Bingo Safari: Design spotting cards with local landmarks. Hunt for hidden garden art, unique mailboxes, and architectural details!"
+      "title": "Neighborhood Bingo Safari",
+      "description": "Design spotting cards with local landmarks. Hunt for hidden garden art, unique mailboxes, and architectural details!"
     },
     {
       "id": 9012,
@@ -219,7 +231,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Recycled Runway: Design newspaper haute couture! Create taped dresses, capes and accessories, then host a fashion show with dramatic poses."
+      "title": "Recycled Runway",
+      "description": "Design newspaper haute couture! Create taped dresses, capes and accessories, then host a fashion show with dramatic poses."
     },
     {
       "id": 9013,
@@ -236,7 +249,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Straw Rocket Launch: Engineer paper rockets and blast them with straw power! Experiment with fin designs for maximum flight distance."
+      "title": "Straw Rocket Launch",
+      "description": "Engineer paper rockets and blast them with straw power! Experiment with fin designs for maximum flight distance."
     },
     {
       "id": 9014,
@@ -253,7 +267,8 @@
       "energy_required": "medium",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Balloon Volleyball: Keep the balloon airborne over your string net! Play in teams with crazy rules like 'no hands' or 'three bounces allowed'."
+      "title": "Balloon Volleyball",
+      "description": "Keep the balloon airborne over your string net! Play in teams with crazy rules like 'no hands' or 'three bounces allowed'."
     },
     {
       "id": 9015,
@@ -270,7 +285,8 @@
       "energy_required": "medium",
       "noise_level": "loud",
       "kid_count": "single",
-      "text": "Rubber Band Symphony: Craft guitars from containers and rubber bands! Experiment with band thickness to create different musical notes."
+      "title": "Rubber Band Symphony",
+      "description": "Craft guitars from containers and rubber bands! Experiment with band thickness to create different musical notes."
     },
     {
       "id": 9016,
@@ -287,7 +303,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Nature Detective Journal: Record outdoor discoveries with sketches and notes. Track animal behaviors, plant changes, and weather patterns."
+      "title": "Nature Detective Journal",
+      "description": "Record outdoor discoveries with sketches and notes. Track animal behaviors, plant changes, and weather patterns."
     },
     {
       "id": 9017,
@@ -304,7 +321,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Life Story Archive: Create your illustrated memoir! Highlight funny toddler moments, big achievements, and future dreams in a mini-book."
+      "title": "Life Story Archive",
+      "description": "Create your illustrated memoir! Highlight funny toddler moments, big achievements, and future dreams in a mini-book."
     },
     {
       "id": 9018,
@@ -321,7 +339,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Book Trailer Producer: Make a movie-style preview for your favorite novel! Film dramatic reenactments and voiceovers to hook new readers."
+      "title": "Book Trailer Producer",
+      "description": "Make a movie-style preview for your favorite novel! Film dramatic reenactments and voiceovers to hook new readers."
     },
     {
       "id": 9019,
@@ -338,7 +357,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Theme Garden Designer: Plan and plant a miniature garden! Choose a theme like pizza (herbs), rainbow (colors), or fairy (mini plants)."
+      "title": "Theme Garden Designer",
+      "description": "Plan and plant a miniature garden! Choose a theme like pizza (herbs), rainbow (colors), or fairy (mini plants)."
     },
     {
       "id": 9020,
@@ -355,7 +375,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "single",
-      "text": "Kitchen Chemist: Conduct safe experiments using household ingredients! Create color-changing potions, density towers, or erupting volcanoes."
+      "title": "Kitchen Chemist",
+      "description": "Conduct safe experiments using household ingredients! Create color-changing potions, density towers, or erupting volcanoes."
     },
     {
       "id": 9021,
@@ -372,7 +393,8 @@
       "energy_required": "high",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Pirate Treasure Expedition: Bury treasure and make a cryptic map! Write riddles leading to X-marks-the-spot. Invite friends to solve your puzzle."
+      "title": "Pirate Treasure Expedition",
+      "description": "Bury treasure and make a cryptic map! Write riddles leading to X-marks-the-spot. Invite friends to solve your puzzle."
     },
     {
       "id": 9022,
@@ -389,7 +411,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Newspaper Engineering: Construct towers using only rolled paper and tape! Test whose structure can hold the most books or survive 'earthquakes'."
+      "title": "Newspaper Engineering",
+      "description": "Construct towers using only rolled paper and tape! Test whose structure can hold the most books or survive 'earthquakes'."
     },
     {
       "id": 9023,
@@ -406,7 +429,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Solar Art Prints: Arrange leaves and flowers on special paper to create sun-powered masterpieces! Watch images magically develop in sunlight."
+      "title": "Solar Art Prints",
+      "description": "Arrange leaves and flowers on special paper to create sun-powered masterpieces! Watch images magically develop in sunlight."
     },
     {
       "id": 9024,
@@ -423,7 +447,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "DIY Escape Adventure: Craft themed escape puzzles! Design paper-based riddles, hidden clues, and code-breaking challenges for friends to solve."
+      "title": "DIY Escape Adventure",
+      "description": "Craft themed escape puzzles! Design paper-based riddles, hidden clues, and code-breaking challenges for friends to solve."
     },
     {
       "id": 9025,
@@ -440,7 +465,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Bird Cafe Builder: Construct a recycled bird feeder! Decorate and hang it to observe feathery visitors. Keep a bird-watching log."
+      "title": "Bird Cafe Builder",
+      "description": "Construct a recycled bird feeder! Decorate and hang it to observe feathery visitors. Keep a bird-watching log."
     },
     {
       "id": 9026,
@@ -457,7 +483,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Origami Masterclass: Master three paper-folding challenges! Create jumping frogs, flapping cranes, and modular stars from colorful sheets."
+      "title": "Origami Masterclass",
+      "description": "Master three paper-folding challenges! Create jumping frogs, flapping cranes, and modular stars from colorful sheets."
     },
     {
       "id": 9027,
@@ -474,7 +501,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Tree Detective: Identify neighborhood trees! Collect and press leaves, document bark patterns, and create a tree encyclopedia."
+      "title": "Tree Detective",
+      "description": "Identify neighborhood trees! Collect and press leaves, document bark patterns, and create a tree encyclopedia."
     },
     {
       "id": 9028,
@@ -491,7 +519,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Code Your World: Complete a coding project! Create a game, interactive story, or digital art piece using beginner-friendly tutorials."
+      "title": "Code Your World",
+      "description": "Complete a coding project! Create a game, interactive story, or digital art piece using beginner-friendly tutorials."
     },
     {
       "id": 9029,
@@ -508,7 +537,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Nature's Canvas: Create temporary outdoor art! Arrange stones, leaves and sticks into mandalas, animal shapes, or abstract patterns."
+      "title": "Nature's Canvas",
+      "description": "Create temporary outdoor art! Arrange stones, leaves and sticks into mandalas, animal shapes, or abstract patterns."
     }
   ]
 }
