@@ -15,7 +15,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Alphabet Ball: Stand in a circle and toss a ball while calling out letters in sequence! Challenge yourselves by spelling entire words or doing multiples. This energetic game combines learning with physical fun."
+      "title": "Alphabet Ball",
+      "description": "Stand in a circle and toss a ball while calling out letters in sequence! Challenge yourselves by spelling entire words or doing multiples. This energetic game combines learning with physical fun."
     },
     {
       "id": 6001,
@@ -32,7 +33,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "multiple",
-      "text": "Paper Chain Challenge: Race against a 5-minute timer to create the longest paper chain! Cut strips of paper, form loops, and connect them. Perfect for crafty competitions on cozy days."
+      "title": "Paper Chain Challenge",
+      "description": "Race against a 5-minute timer to create the longest paper chain! Cut strips of paper, form loops, and connect them. Perfect for crafty competitions on cozy days."
     },
     {
       "id": 6002,
@@ -49,7 +51,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Charades Extravaganza: Act out animals, movies, or book characters without speaking while others guess! Use dramatic gestures and facial expressions for hilarious family bonding."
+      "title": "Charades Extravaganza",
+      "description": "Act out animals, movies, or book characters without speaking while others guess! Use dramatic gestures and facial expressions for hilarious family bonding."
     },
     {
       "id": 6003,
@@ -66,7 +69,8 @@
       "energy_required": "medium",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Backyard Camping Adventure: Build a magical blanket fort or pitch a tent outside! Create your own outdoor sanctuary for storytelling, stargazing, and imaginative adventures."
+      "title": "Backyard Camping Adventure",
+      "description": "Build a magical blanket fort or pitch a tent outside! Create your own outdoor sanctuary for storytelling, stargazing, and imaginative adventures."
     },
     {
       "id": 6004,
@@ -83,7 +87,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "DIY Board Game Creation: Design your own board game from scratch! Invent rules, draw paths, and create challenges using paper and household items for personalized game night fun."
+      "title": "DIY Board Game Creation",
+      "description": "Design your own board game from scratch! Invent rules, draw paths, and create challenges using paper and household items for personalized game night fun."
     },
     {
       "id": 6005,
@@ -100,7 +105,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "single",
-      "text": "Chalk Obstacle Course: Transform your driveway into an action-packed challenge! Draw hopping spots, spinning circles, and balance beams for active outdoor play."
+      "title": "Chalk Obstacle Course",
+      "description": "Transform your driveway into an action-packed challenge! Draw hopping spots, spinning circles, and balance beams for active outdoor play."
     },
     {
       "id": 6006,
@@ -117,7 +123,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Card Castle Challenge: Test your engineering skills by building the tallest card tower! Carefully balance and stack playing cards to create gravity-defying structures."
+      "title": "Card Castle Challenge",
+      "description": "Test your engineering skills by building the tallest card tower! Carefully balance and stack playing cards to create gravity-defying structures."
     },
     {
       "id": 6007,
@@ -134,7 +141,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Mystery Box Sensory Game: Reach into a box filled with hidden objects and guess what you're touching! Describe textures and shapes for exciting tactile exploration."
+      "title": "Mystery Box Sensory Game",
+      "description": "Reach into a box filled with hidden objects and guess what you're touching! Describe textures and shapes for exciting tactile exploration."
     },
     {
       "id": 6008,
@@ -151,7 +159,8 @@
       "energy_required": "high",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Four Square Frenzy: Play this classic playground game! Bounce the ball between quadrants using open palms while strategizing to become the server."
+      "title": "Four Square Frenzy",
+      "description": "Play this classic playground game! Bounce the ball between quadrants using open palms while strategizing to become the server."
     },
     {
       "id": 6009,
@@ -168,7 +177,8 @@
       "energy_required": "low",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Story Chain Adventure: Create an epic tale together! Each person adds one sentence to build surprising narratives with unexpected twists and characters."
+      "title": "Story Chain Adventure",
+      "description": "Create an epic tale together! Each person adds one sentence to build surprising narratives with unexpected twists and characters."
     },
     {
       "id": 6010,
@@ -185,7 +195,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Secret Code Creation: Invent your own spy language! Design symbols for letters, then write coded messages for friends to decipher."
+      "title": "Secret Code Creation",
+      "description": "Invent your own spy language! Design symbols for letters, then write coded messages for friends to decipher."
     },
     {
       "id": 6011,
@@ -202,7 +213,8 @@
       "energy_required": "high",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Backyard Olympics: Host your own athletic competition! Create events like sack races or long jumps, then award homemade medals during a closing ceremony."
+      "title": "Backyard Olympics",
+      "description": "Host your own athletic competition! Create events like sack races or long jumps, then award homemade medals during a closing ceremony."
     },
     {
       "id": 6012,
@@ -219,7 +231,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Comic Strip Creation: Become a cartoonist! Draw a 4-panel comic with characters, speech bubbles, and action sequences to tell your own visual story."
+      "title": "Comic Strip Creation",
+      "description": "Become a cartoonist! Draw a 4-panel comic with characters, speech bubbles, and action sequences to tell your own visual story."
     },
     {
       "id": 6013,
@@ -236,7 +249,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Chalk Metropolis: Transform your driveway into a miniature city! Collaborate to draw roads, buildings, parks, and transportation systems with vibrant chalk details."
+      "title": "Chalk Metropolis",
+      "description": "Transform your driveway into a miniature city! Collaborate to draw roads, buildings, parks, and transportation systems with vibrant chalk details."
     },
     {
       "id": 6014,
@@ -253,7 +267,8 @@
       "energy_required": "medium",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Ultimate Pillow Fort: Build an elaborate indoor hideout! Drape blankets over furniture to create secret rooms and cozy spaces for imaginative adventures."
+      "title": "Ultimate Pillow Fort",
+      "description": "Build an elaborate indoor hideout! Drape blankets over furniture to create secret rooms and cozy spaces for imaginative adventures."
     },
     {
       "id": 6015,
@@ -270,7 +285,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Nature Weaving: Create beautiful art with found materials! Make a stick loom and weave grasses, leaves, and flowers into natural masterpieces."
+      "title": "Nature Weaving",
+      "description": "Create beautiful art with found materials! Make a stick loom and weave grasses, leaves, and flowers into natural masterpieces."
     },
     {
       "id": 6016,
@@ -287,7 +303,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Paper Plate Masks: Transform ordinary plates into animal faces! Decorate, add details, and cut eye holes for creative role-playing fun."
+      "title": "Paper Plate Masks",
+      "description": "Transform ordinary plates into animal faces! Decorate, add details, and cut eye holes for creative role-playing fun."
     },
     {
       "id": 6017,
@@ -304,7 +321,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Backyard Bug Safari: Explore your yard as a nature detective! Search for insects, observe behaviors, and document discoveries in a field journal."
+      "title": "Backyard Bug Safari",
+      "description": "Explore your yard as a nature detective! Search for insects, observe behaviors, and document discoveries in a field journal."
     },
     {
       "id": 6018,
@@ -321,7 +339,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "multiple",
-      "text": "Geometric String Art: Create colorful shapes on your floor! Arrange yarn into triangles, squares, and complex patterns for temporary math-art installations."
+      "title": "Geometric String Art",
+      "description": "Create colorful shapes on your floor! Arrange yarn into triangles, squares, and complex patterns for temporary math-art installations."
     },
     {
       "id": 6019,
@@ -338,7 +357,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Leaf Rubbing Art: Capture nature's beauty on paper! Place leaves under paper and rub with crayons to reveal intricate vein patterns and shapes."
+      "title": "Leaf Rubbing Art",
+      "description": "Capture nature's beauty on paper! Place leaves under paper and rub with crayons to reveal intricate vein patterns and shapes."
     },
     {
       "id": 6020,
@@ -355,7 +375,8 @@
       "energy_required": "medium",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Balloon Keep-Up Challenge: Work together to keep balloons airborne! Use hands, feet, or paper plates to volley balloons in a cooperative aerial game."
+      "title": "Balloon Keep-Up Challenge",
+      "description": "Work together to keep balloons airborne! Use hands, feet, or paper plates to volley balloons in a cooperative aerial game."
     },
     {
       "id": 6021,
@@ -372,7 +393,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Story Stone Creations: Paint pictures on stones to spark storytelling! Create characters, objects, and settings then arrange them to inspire imaginative tales."
+      "title": "Story Stone Creations",
+      "description": "Paint pictures on stones to spark storytelling! Create characters, objects, and settings then arrange them to inspire imaginative tales."
     },
     {
       "id": 6022,
@@ -389,7 +411,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Nature Mandalas: Create beautiful circular art outdoors! Arrange flowers, leaves, and pebbles in symmetric patterns inspired by nature's designs."
+      "title": "Nature Mandalas",
+      "description": "Create beautiful circular art outdoors! Arrange flowers, leaves, and pebbles in symmetric patterns inspired by nature's designs."
     },
     {
       "id": 6023,
@@ -406,7 +429,8 @@
       "energy_required": "low",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Paper Bag Puppet Theater: Create characters from paper bags! Design puppets, build a stage, and perform original shows for family audiences."
+      "title": "Paper Bag Puppet Theater",
+      "description": "Create characters from paper bags! Design puppets, build a stage, and perform original shows for family audiences."
     },
     {
       "id": 6024,
@@ -423,7 +447,8 @@
       "energy_required": "medium",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Bubble Science Lab: Experiment with giant bubbles! Test different solutions and wand designs to discover what creates the most spectacular bubbles."
+      "title": "Bubble Science Lab",
+      "description": "Experiment with giant bubbles! Test different solutions and wand designs to discover what creates the most spectacular bubbles."
     },
     {
       "id": 6025,
@@ -440,7 +465,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Domino Chain Reactions: Design amazing falling patterns! Arrange dominoes in intricate paths and watch the kinetic chain reaction unfold."
+      "title": "Domino Chain Reactions",
+      "description": "Design amazing falling patterns! Arrange dominoes in intricate paths and watch the kinetic chain reaction unfold."
     },
     {
       "id": 6026,
@@ -457,7 +483,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Rock Painting Studio: Transform ordinary stones into art! Paint animals, patterns, or inspirational messages to create colorful garden treasures."
+      "title": "Rock Painting Studio",
+      "description": "Transform ordinary stones into art! Paint animals, patterns, or inspirational messages to create colorful garden treasures."
     },
     {
       "id": 6027,
@@ -474,7 +501,8 @@
       "energy_required": "medium",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Balloon Tennis Tournament: Create paddles from paper plates and volley balloons! Set up nets using string for low-impact indoor tennis matches."
+      "title": "Balloon Tennis Tournament",
+      "description": "Create paddles from paper plates and volley balloons! Set up nets using string for low-impact indoor tennis matches."
     },
     {
       "id": 6028,
@@ -491,7 +519,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Nature Collector Bracelets: Create wearable nature displays! Wrap tape bracelets to collect leaves, petals, and seeds during outdoor explorations."
+      "title": "Nature Collector Bracelets",
+      "description": "Create wearable nature displays! Wrap tape bracelets to collect leaves, petals, and seeds during outdoor explorations."
     },
     {
       "id": 6029,
@@ -508,7 +537,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "LEGO Challenge Builds: Draw random category cards and construct creations! Build structures based on prompts like 'floating house' or 'robot pet'."
+      "title": "LEGO Challenge Builds",
+      "description": "Draw random category cards and construct creations! Build structures based on prompts like 'floating house' or 'robot pet'."
     },
     {
       "id": 6030,
@@ -525,7 +555,8 @@
       "energy_required": "low",
       "noise_level": "normal",
       "kid_count": "multiple",
-      "text": "Paper Airplane Olympics: Design and test different aircraft models! Measure flight distances and compete for longest glide or best tricks."
+      "title": "Paper Airplane Olympics",
+      "description": "Design and test different aircraft models! Measure flight distances and compete for longest glide or best tricks."
     },
     {
       "id": 6031,
@@ -542,7 +573,8 @@
       "energy_required": "low",
       "noise_level": "quiet",
       "kid_count": "single",
-      "text": "Marshmallow Structure Challenge: Build geometric wonders using toothpicks and marshmallows! Create towers, bridges, and complex 3D shapes."
+      "title": "Marshmallow Structure Challenge",
+      "description": "Build geometric wonders using toothpicks and marshmallows! Create towers, bridges, and complex 3D shapes."
     },
     {
       "id": 6032,
@@ -559,7 +591,8 @@
       "energy_required": "medium",
       "noise_level": "loud",
       "kid_count": "multiple",
-      "text": "Family Talent Show Extravaganza: Showcase your special skills! Perform magic tricks, dances, jokes, or musical numbers for unforgettable family memories."
+      "title": "Family Talent Show Extravaganza",
+      "description": "Showcase your special skills! Perform magic tricks, dances, jokes, or musical numbers for unforgettable family memories."
     }
   ]
 }
