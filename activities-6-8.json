@@ -1,0 +1,301 @@
+{
+  "activities": [
+    {
+      "id": 6000,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["ball"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Alphabet ball: Throw the ball while saying letters in order. Make it harder by doing multiples or spelling words!"
+    },
+    {
+      "id": 6001,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["paper", "scissors", "tape"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Paper chain challenge: Who can make the longest paper chain in 5 minutes?"
+    },
+    {
+      "id": 6002,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Charades: Act out animals, movies, or book characters."
+    },
+    {
+      "id": 6003,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Backyard camping: Set up a tent or blanket fort outside."
+    },
+    {
+      "id": 6004,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "DIY board game: Create your own board game with paper and household items."
+    },
+    {
+      "id": 6005,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Sidewalk chalk obstacle course: Draw challenges like 'spin 3 times' or 'hop here'."
+    },
+    {
+      "id": 6006,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["cards"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Card house building: See who can build the tallest card house."
+    },
+    {
+      "id": 6007,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Mystery box: Put objects in a box and guess what they are by touch."
+    },
+    {
+      "id": 6008,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["ball"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Four square: Mark a 4-square court with chalk and play with a ball."
+    },
+    {
+      "id": 6009,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Story chain: Start a story, each person adds one sentence."
+    },
+    {
+      "id": 6010,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["paper", "pencils"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Secret code creation: Invent your own alphabet code and write messages."
+    },
+    {
+      "id": 6011,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "long",
+      "text": "Mini Olympics: Create 5 different athletic challenges with homemade medals."
+    },
+    {
+      "id": 6012,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["paper", "markers"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Comic strip creation: Draw a 4-panel comic telling a funny story."
+    },
+    {
+      "id": 6013,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["chalk"],
+      "independent": false,
+      "duration": "long",
+      "text": "Chalk city: Design an entire miniature town with roads and buildings on pavement."
+    },
+    {
+      "id": 6014,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["pillows", "blankets"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Cushion castle: Build an elaborate fort with household items."
+    },
+    {
+      "id": 6015,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nature weaving: Create a loom from sticks and weave with grasses/leaves."
+    },
+    {
+      "id": 6016,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["paper plates", "markers"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Plate masks: Decorate paper plates as animal faces with cut-out eyes."
+    },
+    {
+      "id": 6017,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Bug expedition: Search for insects and document findings."
+    },
+    {
+      "id": 6018,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["yarn"],
+      "independent": false,
+      "duration": "medium",
+      "text": "String shapes: Create geometric shapes on carpet with lengths of yarn."
+    },
+    {
+      "id": 6019,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Leaf rubbings: Collect interesting leaves and make crayon rubbings."
+    },
+    {
+      "id": 6020,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Balloon keep-up: Work together to keep a balloon in the air."
+    },
+    {
+      "id": 6021,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Story stones: Paint pictures on stones to use as story prompts."
+    },
+    {
+      "id": 6022,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nature mandala: Create circular patterns with found natural objects."
+    },
+    {
+      "id": 6023,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["paper bags"],
+      "independent": true,
+      "duration": "long",
+      "text": "Puppet theater: Create puppets from paper bags and put on a show."
+    },
+    {
+      "id": 6024,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Bubble science: Experiment with different bubble solutions and wands."
+    },
+    {
+      "id": 6025,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["dominoes"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Domino chain reaction: Set up an elaborate dominoes falling pattern."
+    },
+    {
+      "id": 6026,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Rock painting: Decorate smooth rocks with acrylic paints."
+    },
+    {
+      "id": 6027,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Balloon tennis: Use paper plate paddles to hit balloons back and forth."
+    },
+    {
+      "id": 6028,
+      "age": "6-8",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nature bracelet: Wrap tape sticky-side out to collect small nature items."
+    },
+    {
+      "id": 6029,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Lego challenge: Build structures based on random category cards."
+    },
+    {
+      "id": 6030,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Paper airplane contest: Design and test different airplane models."
+    },
+    {
+      "id": 6031,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["marshmallows"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Marshmallow structures: Build with toothpicks and mini marshmallows."
+    },
+    {
+      "id": 6032,
+      "age": "6-8",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Family talent show: Each member prepares and performs a special talent."
+    }
+  ]
+}

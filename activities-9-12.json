@@ -1,0 +1,274 @@
+{
+  "activities": [
+    {
+      "id": 9000,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["tape", "paper", "scissors"],
+      "independent": true,
+      "duration": "long",
+      "text": "Tape maze engineering: Design an elaborate maze with multiple levels using tape, paper bridges, and obstacles."
+    },
+    {
+      "id": 9001,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["paper", "pencils"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Graphic novel creation: Develop characters and draw a 3-page comic story with speech bubbles."
+    },
+    {
+      "id": 9002,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Photo story challenge: Take 5 photos that tell a story without words, then have others guess the plot."
+    },
+    {
+      "id": 9003,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["paper", "tape"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Paper structure challenge: Build a structure using exactly 5 sheets of paper and 12 inches of tape that can hold a book."
+    },
+    {
+      "id": 9004,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["ball"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Basketball skill drill: Create a course with different shooting spots worth varying points."
+    },
+    {
+      "id": 9005,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["cards"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Card game marathon: Play 3 different card games back-to-back, keeping cumulative scores."
+    },
+    {
+      "id": 9006,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["paper", "scissors", "tape"],
+      "independent": true,
+      "duration": "long",
+      "text": "Escape room design: Create 3 puzzle boxes with paper clues, locked with tape seals."
+    },
+    {
+      "id": 9007,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Flashlight treasure hunt: Hide objects and create a glow-in-the-dark map using flashlight clues."
+    },
+    {
+      "id": 9008,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Music video challenge: Lip sync and choreograph a full song performance."
+    },
+    {
+      "id": 9009,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["ball", "tape"],
+      "independent": true,
+      "duration": "long",
+      "text": "Olympic challenge course: Design 5 different ball games with tape-marked courts and keep score."
+    },
+    {
+      "id": 9010,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Stop-motion film: Use toys and a phone to create a short stop-motion movie."
+    },
+    {
+      "id": 9011,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Neighborhood bingo: Create bingo cards with things you might see on a walk."
+    },
+    {
+      "id": 9012,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["newspaper", "tape"],
+      "independent": true,
+      "duration": "long",
+      "text": "Newspaper fashion: Design and model clothing made from newspaper."
+    },
+    {
+      "id": 9013,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["paper", "straws"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Straw rockets: Make and launch paper rockets using straws."
+    },
+    {
+      "id": 9014,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["balloons"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Balloon volleyball: Play volleyball with a balloon over a string 'net'."
+    },
+    {
+      "id": 9015,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["rubber bands", "plastic container"],
+      "independent": true,
+      "duration": "long",
+      "text": "DIY instrument: Make a rubber band guitar on a plastic container."
+    },
+    {
+      "id": 9016,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Nature journal: Sketch and write about outdoor observations."
+    },
+    {
+      "id": 9017,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Mini memoir: Write and illustrate a short autobiography."
+    },
+    {
+      "id": 9018,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Book trailer: Create a video preview for a favorite book."
+    },
+    {
+      "id": 9019,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Garden planning: Design and plant a small themed garden."
+    },
+    {
+      "id": 9020,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "DIY science experiment: Research and conduct a simple chemistry experiment."
+    },
+    {
+      "id": 9021,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Treasure hunt: Create and follow a map with clues around the yard."
+    },
+    {
+      "id": 9022,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["newspaper"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Paper engineering: Build structures using only newspaper and tape."
+    },
+    {
+      "id": 9023,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Sun prints: Arrange objects on photosensitive paper to create art."
+    },
+    {
+      "id": 9024,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "DIY escape room: Create puzzle challenges around a theme."
+    },
+    {
+      "id": 9025,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Bird feeder project: Build and install a simple bird feeder."
+    },
+    {
+      "id": 9026,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Origami challenge: Learn and create 3 different origami figures."
+    },
+    {
+      "id": 9027,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Tree identification: Collect and press leaves from different trees."
+    },
+    {
+      "id": 9028,
+      "age": "9-12",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Coding project: Complete a beginner coding tutorial online."
+    },
+    {
+      "id": 9029,
+      "age": "9-12",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Outdoor art: Create temporary art with sticks, stones and leaves."
+    }
+  ]
+}

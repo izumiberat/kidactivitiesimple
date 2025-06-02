@@ -1,0 +1,436 @@
+{
+  "activities": [
+    {
+      "id": 3000,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["paper", "pencils"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Drawing game: Take turns drawing parts of a funny creature (head, body, legs)."
+    },
+    {
+      "id": 3001,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Sticker sorting: Give child stickers and paper to create their own scene."
+    },
+    {
+      "id": 3002,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Indoor obstacle course: Use cushions, chairs, and blankets to create a course."
+    },
+    {
+      "id": 3003,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["tape"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Tape shapes: Make shapes with tape on floor for jumping games."
+    },
+    {
+      "id": 3004,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["blocks"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Tallest tower: Who can build the tallest tower before it falls?"
+    },
+    {
+      "id": 3005,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Freeze dance: Dance when music plays, freeze when it stops."
+    },
+    {
+      "id": 3006,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["ball"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Color ball: Call out a color and child kicks/throws ball to something that color."
+    },
+    {
+      "id": 3007,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Nature scavenger hunt: Find items like a smooth rock, green leaf, etc."
+    },
+    {
+      "id": 3008,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Sock toss: Roll socks into balls and toss into laundry basket."
+    },
+    {
+      "id": 3009,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Shadow puppets: Use hands to make shadows on the wall with a lamp."
+    },
+    {
+      "id": 3010,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Sock matching: Mix up clean socks and have child pair them together."
+    },
+    {
+      "id": 3011,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Animal movement game: 'Move like a monkey/jump like a kangaroo' etc."
+    },
+    {
+      "id": 3012,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Pillow path: Create a stepping stone path with couch pillows."
+    },
+    {
+      "id": 3013,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Color scavenger hunt: Find one item of each color in the room."
+    },
+    {
+      "id": 3014,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Laundry basket boat: Pretend a laundry basket is a boat/spacecraft/car."
+    },
+    {
+      "id": 3015,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Memory tray game: Show 5 items on tray, cover, then recall what was there."
+    },
+    {
+      "id": 3016,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Blanket fort: Drape blankets over furniture to create a cozy hideout."
+    },
+    {
+      "id": 3017,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Simon says: Classic game with simple commands for this age group."
+    },
+    {
+      "id": 3018,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Toy car wash: Set up a 'car wash' with sponges and water for toy vehicles."
+    },
+    {
+      "id": 3019,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Alphabet hunt: Find objects that start with each letter of the alphabet."
+    },
+    {
+      "id": 3020,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Spoon relay: Balance a small ball on a spoon and walk across room."
+    },
+    {
+      "id": 3021,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "What's missing?: Place 5 objects, have child close eyes, remove one to identify."
+    },
+    {
+      "id": 3022,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Pillow case slide: Sit on pillow case and slide on carpeted floor."
+    },
+    {
+      "id": 3023,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Feelings charades: Act out different emotions for others to guess."
+    },
+    {
+      "id": 3024,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Toy parade: Line up toys and march them around the room with music."
+    },
+    {
+      "id": 3025,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Story dice: Roll dice with pictures and make up a story together."
+    },
+    {
+      "id": 3026,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Sock basketball: Roll socks into balls and toss into laundry basket."
+    },
+    {
+      "id": 3027,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Follow the leader: Take turns being leader with silly movements."
+    },
+    {
+      "id": 3028,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Toy rescue: Freeze small toys in ice and 'rescue' them with warm water."
+    },
+    {
+      "id": 3029,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nature bracelet: Wrap tape sticky-side out around wrist to collect small nature items."
+    },
+    {
+      "id": 3030,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["playdough"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Playdough restaurant: Create pretend food items and 'serve' them."
+    },
+    {
+      "id": 3031,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["bucket", "water"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Painting with water: 'Paint' sidewalks or fences with water and brushes."
+    },
+    {
+      "id": 3032,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["cotton balls", "tongs"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Cotton ball transfer: Use tongs to move cotton balls between bowls."
+    },
+    {
+      "id": 3033,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Shadow tracing: Trace each other's shadows with chalk at different times."
+    },
+    {
+      "id": 3034,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Animal yoga: Pose like different animals (frog, cobra, downward dog)."
+    },
+    {
+      "id": 3035,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Puddle jumping: Find safe puddles to splash in after rain."
+    },
+    {
+      "id": 3036,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Sock skating: Slide on hardwood floors with socks."
+    },
+    {
+      "id": 3037,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Animal sound bingo: Match animal pictures to sounds you make."
+    },
+    {
+      "id": 3038,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Dandelion blowing: Practice blowing dandelion seeds and make wishes."
+    },
+    {
+      "id": 3039,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Pillow road: Create a path with pillows to crawl or walk along."
+    },
+    {
+      "id": 3040,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Follow the leader: Take turns leading silly movements around the house."
+    },
+    {
+      "id": 3041,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Dirt kitchen: Set up an outdoor 'kitchen' with natural materials."
+    },
+    {
+      "id": 3042,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Stuffed animal school: Set up and 'teach' a class to stuffed animals."
+    },
+    {
+      "id": 3043,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["cotton swabs", "paint"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Q-tip pointillism: Create artwork using only dots from cotton swabs."
+    },
+    {
+      "id": 3044,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["spray bottle", "water"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Water spray art: 'Paint' sidewalks or fences with water in spray bottles."
+    },
+    {
+      "id": 3045,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Color mixing: Use food coloring in water to create new colors."
+    },
+    {
+      "id": 3046,
+      "age": "3-5",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Flashlight tag: Play tag with flashlight beams in a darkened room."
+    },
+    {
+      "id": 3047,
+      "age": "3-5",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Flower petal soup: Make pretend soup with flower petals and water."
+    }
+  ]
+}

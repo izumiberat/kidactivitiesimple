@@ -1,0 +1,481 @@
+{
+  "activities": [
+    {
+      "id": 1,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Peek-a-boo with a blanket: Simple but always delightful for little ones!"
+    },
+    {
+      "id": 2,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Sensory bottles: Fill empty water bottles with colorful items like beads or glitter and seal tightly."
+    },
+    {
+      "id": 3,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Stacking cups: Use plastic cups to stack and knock down."
+    },
+    {
+      "id": 4,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["blanket"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Blanket ride: Gently pull child on a blanket around the room."
+    },
+    {
+      "id": 5,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Texture exploration: Gather different fabrics/textures for baby to feel."
+    },
+    {
+      "id": 6,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Bubble chasing: Blow bubbles and let toddler chase/pop them."
+    },
+    {
+      "id": 7,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["ball"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Rolling ball: Sit opposite your child and roll a ball back and forth."
+    },
+    {
+      "id": 8,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nature walk: Carry baby and point out different colors in nature."
+    },
+    {
+      "id": 9,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Dance party: Hold baby and dance to music."
+    },
+    {
+      "id": 10,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Mirror play: Make faces in a mirror with baby."
+    },
+    {
+      "id": 11,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["soft toys"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Soft toy parade: Line up stuffed animals and march them while making funny sounds."
+    },
+    {
+      "id": 12,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Body parts song: Sing 'Head Shoulders Knees and Toes' while touching each part."
+    },
+    {
+      "id": 13,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["pots", "spoons"],
+      "independent": true,
+      "duration": "quick",
+      "text": "Kitchen drum set: Let baby bang on pots with wooden spoons."
+    },
+    {
+      "id": 14,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Cloud watching: Lie on a blanket and point out cloud shapes together."
+    },
+    {
+      "id": 15,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Airplane baby: Gently lift baby while making airplane noises."
+    },
+    {
+      "id": 16,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Tickle game: Gently tickle different body parts while naming them."
+    },
+    {
+      "id": 17,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Animal sounds: Make animal noises and encourage baby to mimic."
+    },
+    {
+      "id": 18,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Kissing game: Gently kiss baby's hands, feet, and nose while naming each."
+    },
+    {
+      "id": 19,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby massage: Gently massage baby with lotion after bath time."
+    },
+    {
+      "id": 20,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Lap bounce: Sit baby on lap and gently bounce to nursery rhymes."
+    },
+    {
+      "id": 21,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Garden explorer: Let baby touch safe leaves and flowers while describing textures."
+    },
+    {
+      "id": 22,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Pat-a-cake: Clap baby's hands together while singing the rhyme."
+    },
+    {
+      "id": 23,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Sock puppet show: Use clean socks as simple puppets to tell a story."
+    },
+    {
+      "id": 24,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "This little piggy: Play the classic toe-counting game."
+    },
+    {
+      "id": 25,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby yoga: Gently move baby's arms and legs in simple stretches."
+    },
+    {
+      "id": 26,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Flying kisses: Blow kisses to baby and help them mimic the motion."
+    },
+    {
+      "id": 27,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nursery rhyme time: Sing three classic nursery rhymes with actions."
+    },
+    {
+      "id": 28,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Up and down: Lift baby up high, then swoop down low repeatedly."
+    },
+    {
+      "id": 29,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby sign language: Teach simple signs like 'more', 'milk', and 'all done'."
+    },
+    {
+      "id": 30,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Stroller safari: Point out interesting sights during a neighborhood walk."
+    },
+    {
+      "id": 31,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Color tour: Walk around house naming colors of objects you point to."
+    },
+    {
+      "id": 32,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Tummy time fun: Place interesting toys just out of reach during tummy time."
+    },
+    {
+      "id": 33,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby book club: Read simple board books with high-contrast pictures."
+    },
+    {
+      "id": 34,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Silly face contest: Make exaggerated facial expressions for baby to mimic."
+    },
+    {
+      "id": 35,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby dance party: Hold baby and dance to different music genres."
+    },
+    {
+      "id": 36,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Where's baby?: Play peek-a-boo with a burp cloth or small blanket."
+    },
+    {
+      "id": 37,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Gentle baby exercises: Help baby do bicycle legs and arm crosses."
+    },
+    {
+      "id": 38,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Magic scarf: Play peek-a-boo with a lightweight scarf."
+    },
+    {
+      "id": 39,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby drumroll: Gently drum on baby's tummy while making silly sounds."
+    },
+    {
+      "id": 40,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Park bench people watching: Describe what people are doing at the park."
+    },
+    {
+      "id": 41,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["empty containers"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Container play: Fill and empty different sized containers with small toys."
+    },
+    {
+      "id": 42,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["scarf"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Scarf peekaboo: Play peekaboo with a lightweight scarf."
+    },
+    {
+      "id": 43,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Texture walk: Help baby walk on different surfaces (carpet, towel, foam)."
+    },
+    {
+      "id": 44,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Stroller safari: Point out interesting sights during neighborhood walk."
+    },
+    {
+      "id": 45,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby book club: Read simple board books with high-contrast pictures."
+    },
+    {
+      "id": 46,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Silly face contest: Make exaggerated facial expressions for baby to mimic."
+    },
+    {
+      "id": 47,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby dance party: Hold baby and dance to different music genres."
+    },
+    {
+      "id": 48,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Where's baby?: Play peek-a-boo with a burp cloth or small blanket."
+    },
+    {
+      "id": 49,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Flying kisses: Blow kisses to baby and help them mimic the motion."
+    },
+    {
+      "id": 50,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Nursery rhyme time: Sing three classic nursery rhymes with actions."
+    },
+    {
+      "id": 51,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Up and down: Lift baby up high, then swoop down low repeatedly."
+    },
+    {
+      "id": 52,
+      "age": "0-2",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Baby drumroll: Gently drum on baby's tummy while making silly sounds."
+    },
+    {
+      "id": 53,
+      "age": "0-2",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "quick",
+      "text": "Garden explorer: Let baby touch safe leaves and flowers while describing textures."
+    }
+  ]
+}

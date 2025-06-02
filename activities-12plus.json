@@ -1,0 +1,274 @@
+{
+  "activities": [
+    {
+      "id": 12000,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Podcast production: Record a 10-minute episode about a topic they're passionate about."
+    },
+    {
+      "id": 12001,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["paper", "pencils"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Pictionary tournament: Play with custom-drawn word cards in multiple difficulty levels."
+    },
+    {
+      "id": 12002,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Geocaching adventure: Find 3 local geocaches or create your own hidden container."
+    },
+    {
+      "id": 12003,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "TikTok challenge: Film and edit three 15-second creative videos."
+    },
+    {
+      "id": 12004,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "MasterChef challenge: Cook a three-course meal using only available ingredients."
+    },
+    {
+      "id": 12005,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["ball"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Spikeball tournament: Set up a bracket competition with customized rules."
+    },
+    {
+      "id": 12006,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Film festival: Watch 3 short films from different genres and discuss them."
+    },
+    {
+      "id": 12007,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Science fair: Conduct 3 simple experiments and record the results."
+    },
+    {
+      "id": 12008,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Night exploration: Create a star map and identify constellations."
+    },
+    {
+      "id": 12009,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": false,
+      "duration": "medium",
+      "text": "Talent showcase: Each person prepares and performs a special talent."
+    },
+    {
+      "id": 12010,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "DIY podcast: Record a podcast episode about a topic they're passionate about."
+    },
+    {
+      "id": 12011,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Outdoor art gallery: Create nature art installations and give tours."
+    },
+    {
+      "id": 12012,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["magazines", "glue"],
+      "independent": true,
+      "duration": "long",
+      "text": "Vision board: Create a collage of goals and inspirational images."
+    },
+    {
+      "id": 12013,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Language challenge: Learn and teach 10 phrases in a new language."
+    },
+    {
+      "id": 12014,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Fitness challenge: Create and complete a backyard obstacle course."
+    },
+    {
+      "id": 12015,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Park clean-up: Organize a neighborhood beautification project."
+    },
+    {
+      "id": 12016,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Family history project: Interview relatives and create a family tree."
+    },
+    {
+      "id": 12017,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Life skills challenge: Learn and practice a new practical skill."
+    },
+    {
+      "id": 12018,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Debate club: Choose topics and practice formal debate techniques."
+    },
+    {
+      "id": 12019,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Outdoor yoga: Practice yoga poses in the park or backyard."
+    },
+    {
+      "id": 12020,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Cookbook challenge: Create an original recipe and prepare it for family."
+    },
+    {
+      "id": 12021,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Budget challenge: Plan a week's worth of meals on a set 'budget'."
+    },
+    {
+      "id": 12022,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Fitness circuit: Create and complete an outdoor exercise routine."
+    },
+    {
+      "id": 12023,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Blog creation: Start a blog about a topic of interest with 3 posts."
+    },
+    {
+      "id": 12024,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Photo essay: Tell a story through a series of 10 connected photos."
+    },
+    {
+      "id": 12025,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Short film making: Write, film and edit a 3-minute movie."
+    },
+    {
+      "id": 12026,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Personal finance project: Research and compare bank accounts/credit cards."
+    },
+    {
+      "id": 12027,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "medium",
+      "text": "Career research: Explore and present on 3 potential future careers."
+    },
+    {
+      "id": 12028,
+      "age": "12+",
+      "location": "indoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "DIY craft tutorial: Film yourself teaching a simple craft project."
+    },
+    {
+      "id": 12029,
+      "age": "12+",
+      "location": "outdoor",
+      "materials": ["none"],
+      "independent": true,
+      "duration": "long",
+      "text": "Outdoor photography challenge: Take artistic photos matching a theme (shadows, textures, etc.)"
+    }
+  ]
+}
