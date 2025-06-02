@@ -1231,7 +1231,6 @@ function handleAgeChange() {
 function toggleFavorite() {
   if (!currentActivity) return;
 
-  // Create composite key using age group + ID
   const age = document.getElementById('age').value;
   currentActivity.compositeId = `${age}-${currentActivity.id}`;
 
@@ -1241,10 +1240,12 @@ function toggleFavorite() {
     favorites.splice(existingIndex, 1);
     showToast('Removed from favorites');
   } else {
+    // ADDED: Ensure we save the title with the favorite
     favorites.push({
       ...currentActivity,
       compositeId: currentActivity.compositeId,
-      ageGroup: age
+      ageGroup: age,
+      title: currentActivity.title // Make sure title is preserved
     });
     showToast('Added to favorites');
   }
@@ -1258,6 +1259,7 @@ function toggleFavorite() {
   updateFavoriteButton();
   updateFavoriteCount();
 }
+
 
 function updateFavoriteButton() {
   const btn = document.querySelector('.favorite-btn');
@@ -1295,25 +1297,26 @@ function showTab(tabName) {
 
 // Display favorites
 function displayFavorites() {
-  const container = document.getElementById('favorites-list');
-  
-  if (favorites.length === 0) {
-    container.innerHTML = `
-      <div style="text-align: center; padding: 2rem; color: #666;">
-        <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">💖 No favorites yet!</h3>
-        <p style="font-size: 1rem;">Save activities you love by clicking the "Save as Favorite" button.</p>
-      </div>
-    `;
-    return;
-  }
-  
+    const container = document.getElementById('favorites-list');
+    
+    if (favorites.length === 0) {
+      container.innerHTML = `
+        <div style="text-align: center; padding: 2rem; color: #666;">
+          <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">💖 No favorites yet!</h3>
+          <p style="font-size: 1rem;">Save activities you love by clicking the "Save as Favorite" button.</p>
+        </div>
+      `;
+      return;
+    }
   container.innerHTML = '';
   
   favorites.forEach(activity => {
     const favElement = document.createElement('div');
     favElement.className = 'favorite-item';
+    
+    // CHANGED: Use activity.title instead of "Activity #xxx"
     favElement.innerHTML = `
-      <h4>Activity #${activity.id}</h4>
+      <h4>${escapeHtml(activity.title)}</h4>
       <div class="activity-text">${escapeHtml(activity.text)}</div>
       <div class="activity-meta">
         <span class="meta-tag">${activity.ageGroup} years</span>
