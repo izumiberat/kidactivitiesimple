@@ -42,7 +42,7 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Age selector */
+/* Updated Age selector buttons */
 .age-selector {
   background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
   padding: 1.2rem;
@@ -58,19 +58,40 @@ h1 {
   font-size: 1.2rem;
 }
 
-.age-selector select {
-  width: 100%;
-  max-width: 300px;
-  padding: 0.85rem;
-  border: 2px solid #e9ecef;
-  border-radius: 10px;
-  font-size: 1rem;
+.age-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.age-btn {
   background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.6rem 0.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
   transition: all 0.3s;
-  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  font-size: 0.8rem;
   text-align: center;
-  margin: 0 auto;
-  display: block;
+}
+
+.age-btn:hover {
+  background: #e0e7ff;
+}
+
+.age-btn.active {
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 3px 8px rgba(67, 97, 238, 0.3);
+}
+
+@media (max-width: 480px) {
+  .age-buttons {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Simplified Quick Actions */
@@ -731,11 +752,11 @@ select:focus {
 <body>
 <div class="age-selector">
   <h3>PlayIdeas</h3>
-  <select id="age" onchange="handleAgeChange()">
-    <option value="0-2">👶 Babies & Toddlers (0-2)</option>
-    <option value="3-5">🧒 Preschoolers (3-5)</option>
-    <option value="6-11">🎒 School Age (6-11)</option>
-  </select>
+  <div class="age-buttons">
+    <button class="age-btn" data-age="0-2" onclick="handleAgeButtonClick('0-2')">👶 Babies & Toddlers (0-2)</button>
+    <button class="age-btn active" data-age="3-5" onclick="handleAgeButtonClick('3-5')">🧒 Preschoolers (3-5)</button>
+    <button class="age-btn" data-age="6-11" onclick="handleAgeButtonClick('6-11')">🎒 School Age (6-11)</button>
+  </div>
 </div>
 
 <div class="tab-buttons">
@@ -873,6 +894,7 @@ let allActivities = {};
 let favorites = [];
 let currentActivity = null;
 let activitiesLoaded = false;
+let currentAgeGroup = '3-5'; // Default age group
 
 // Map age groups to JSON filenames
 const ageGroupFiles = {
@@ -890,6 +912,29 @@ function escapeHtml(unsafe) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+// Set active age button
+function setActiveAgeButton(ageGroup) {
+  // Remove active class from all
+  document.querySelectorAll('.age-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  // Add active class to the button with data-age = ageGroup
+  const btn = document.querySelector(`.age-btn[data-age="${ageGroup}"]`);
+  if (btn) {
+    btn.classList.add('active');
+    currentAgeGroup = ageGroup;
+  }
+}
+
+// Handle age button click
+function handleAgeButtonClick(ageGroup) {
+  setActiveAgeButton(ageGroup);
+  activitiesLoaded = false;
+  activities = [];
+  loadActivities(ageGroup);
 }
 
 // Show toast notification
@@ -1000,7 +1045,6 @@ document.addEventListener('click', function(e) {
 
 // Get form values
 function getFormValues() {
-  const age = document.getElementById('age').value;
   const kidCount = document.querySelector('.radio-btn[data-name="kid-count"].selected')?.getAttribute('data-value') || 'single';
   const location = document.querySelector('.radio-btn[data-name="location"].selected')?.getAttribute('data-value') || 'indoor';
   const duration = document.querySelector('.radio-btn[data-name="duration"].selected')?.getAttribute('data-value') || 'quick';
@@ -1011,7 +1055,6 @@ function getFormValues() {
     .map(tag => tag.getAttribute('data-value'));
 
   return {
-    age,
     kidCount,
     location,
     duration,
@@ -1154,7 +1197,7 @@ function displayActivity(activity) {
 async function generateActivity() {
   const criteria = getFormValues();
 
-  await loadActivities(criteria.age);
+  await loadActivities(currentAgeGroup);
 
   if (!activitiesLoaded) {
     return;
@@ -1168,14 +1211,13 @@ async function generateActivity() {
   }
 
   const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
-  randomActivity.compositeId = `${criteria.age}-${randomActivity.id}`; // Add composite ID
+  randomActivity.compositeId = `${currentAgeGroup}-${randomActivity.id}`; // Add composite ID
   displayActivity(randomActivity);
 }
 
 // Quick activity functions
 async function quickActivity(location, duration, special) {
   const criteria = {
-    age: document.getElementById('age').value,
     location: location || 'any',
     duration: duration || 'any',
     kidCount: special === 'multiple' ? 'multiple' : 'single',
@@ -1185,7 +1227,7 @@ async function quickActivity(location, duration, special) {
     noiseLevel: special === 'quiet' ? 'quiet' : undefined
   };
 
-  await loadActivities(criteria.age);
+  await loadActivities(currentAgeGroup);
 
   if (!activitiesLoaded) return;
 
@@ -1197,13 +1239,12 @@ async function quickActivity(location, duration, special) {
   }
 
   const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
-  randomActivity.compositeId = `${criteria.age}-${randomActivity.id}`; // Add composite ID
+  randomActivity.compositeId = `${currentAgeGroup}-${randomActivity.id}`; // Add composite ID
   displayActivity(randomActivity);
 }
 
 async function instantActivity() {
   const criteria = {
-    age: document.getElementById('age').value,
     location: 'any',
     duration: 'any',
     kidCount: 'any',
@@ -1213,21 +1254,14 @@ async function instantActivity() {
     noiseLevel: undefined
   };
 
-  await loadActivities(criteria.age);
+  await loadActivities(currentAgeGroup);
 
   if (!activitiesLoaded) return;
 
   const filteredActivities = filterActivities(criteria);
   const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
-  randomActivity.compositeId = `${criteria.age}-${randomActivity.id}`; // Add composite ID
+  randomActivity.compositeId = `${currentAgeGroup}-${randomActivity.id}`; // Add composite ID
   displayActivity(randomActivity);
-}
-
-// Handle age change
-function handleAgeChange() {
-  const newAge = document.getElementById('age').value;
-  activitiesLoaded = false;
-  activities = [];
 }
 
 // Favorites functionality
@@ -1235,8 +1269,7 @@ function toggleFavorite() {
   if (!currentActivity) return;
 
   // Create composite key using age group + ID
-  const age = document.getElementById('age').value;
-  currentActivity.compositeId = `${age}-${currentActivity.id}`;
+  currentActivity.compositeId = `${currentAgeGroup}-${currentActivity.id}`;
 
   const existingIndex = favorites.findIndex(fav => fav.compositeId === currentActivity.compositeId);
 
@@ -1247,7 +1280,7 @@ function toggleFavorite() {
     favorites.push({
       ...currentActivity,
       compositeId: currentActivity.compositeId,
-      ageGroup: age
+      ageGroup: currentAgeGroup
     });
     showToast('Added to favorites');
   }
@@ -1361,7 +1394,7 @@ function loadFavorite(compositeId) {
   const activity = favorites.find(fav => fav.compositeId === compositeId);
   if (activity) {
     // Set the age group
-    document.getElementById('age').value = activity.ageGroup;
+    setActiveAgeButton(activity.ageGroup);
     
     // Show the generator tab
     showTab('generator');
@@ -1390,7 +1423,7 @@ function init() {
   }
   
   // Load initial activities for default age
-  loadActivities('3-5');
+  loadActivities(currentAgeGroup);
   
   // Close modal when clicking outside content
   window.addEventListener('click', function(event) {
