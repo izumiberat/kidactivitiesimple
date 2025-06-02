@@ -27,97 +27,124 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   max-width: 600px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f0f8ff;
+  padding: 10px;
+  background: linear-gradient(135deg, #e6f7ff 0%, #f5f0ff 100%);
   line-height: 1.6;
   color: #333;
-  background: linear-gradient(135deg, #e6f7ff 0%, #f5f0ff 100%);
   overflow-x: hidden;
-}
-h1 {
-  color: var(--primary);
-  text-align: center;
-  margin-bottom: 1.5rem;
-  padding-top: 1rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  min-height: 100vh;
 }
 
-/* Age selector */
-.age-selector {
+/* Compact header with age selector */
+.compact-header {
   background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
-  padding: 1.2rem;
-  border-radius: 15px;
-  margin-bottom: 1.5rem;
+  padding: 0.8rem;
+  border-radius: 12px;
+  margin-bottom: 0.8rem;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+  box-shadow: 0 3px 8px rgba(33, 150, 243, 0.2);
 }
 
-.age-selector h3 {
-  margin-bottom: 0.75rem;
-  color: #0277bd;
-  font-size: 1.2rem;
-}
-
-.age-selector select {
+.compact-header select {
   width: 100%;
-  max-width: 300px;
-  padding: 0.85rem;
+  max-width: 280px;
+  padding: 0.7rem;
   border: 2px solid #e9ecef;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
   background: white;
   transition: all 0.3s;
-  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
   text-align: center;
   margin: 0 auto;
   display: block;
 }
 
-/* Simplified Quick Actions */
-.quick-actions {
+/* Tab system - more compact */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 0.8rem;
+  gap: 0.2rem;
   background: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  margin-bottom: 1.5rem;
-  text-align: center;
+  padding: 0.2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
-.quick-actions h2 {
-  color: var(--primary);
-  margin-bottom: 1.2rem;
-  font-size: 1.3rem;
+.tab-btn {
+  flex: 1;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 0.9rem;
+}
+
+.tab-btn.active {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 2px 6px rgba(67, 97, 238, 0.3);
+}
+
+.favorite-count {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  background: var(--danger);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Super compact quick actions */
+.quick-actions {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 0.8rem;
+  text-align: center;
 }
 
 .quick-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.8rem;
-  margin-bottom: 1.2rem;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .quick-btn {
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: white;
   border: none;
-  padding: 0.9rem;
-  border-radius: 12px;
+  padding: 0.7rem;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+  box-shadow: 0 3px 8px rgba(67, 97, 238, 0.3);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70px;
+  min-height: 60px;
 }
 
 .quick-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(67, 97, 238, 0.4);
 }
 
 .quick-btn.low-energy {
@@ -138,11 +165,11 @@ h1 {
 
 .instant-btn {
   background: linear-gradient(135deg, var(--success), #20c997);
-  padding: 1.1rem;
-  font-size: 1.1rem;
-  border-radius: 15px;
-  margin-top: 1rem;
-  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
   transition: all 0.3s;
   width: 100%;
   border: none;
@@ -152,22 +179,21 @@ h1 {
 }
 
 .instant-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(40, 167, 69, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
 }
 
 .customize-btn {
   background: white;
   color: var(--primary);
   border: 2px solid var(--primary);
-  padding: 0.9rem;
-  border-radius: 12px;
+  padding: 0.7rem;
+  border-radius: 10px;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-  margin-top: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transition: all 0.3s;
 }
 
@@ -176,16 +202,16 @@ h1 {
   color: white;
 }
 
-/* Results */
+/* Results - full screen on mobile */
 #result {
   background: white;
-  padding: 1.8rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
   display: none;
   position: sticky;
-  top: 20px;
+  top: 10px;
   z-index: 10;
   animation: fadeIn 0.5s ease;
 }
@@ -197,15 +223,15 @@ h1 {
 
 .result-close-btn {
   position: fixed;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   background: #888;
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   z-index: 101;
   cursor: pointer;
@@ -232,7 +258,8 @@ h1 {
     border-radius: 0;
     z-index: 100;
     overflow-y: auto;
-    padding-top: 60px;
+    padding: 1rem;
+    padding-top: 50px;
   }
   
   .result-close-btn {
@@ -243,7 +270,7 @@ h1 {
 /* Adjust padding for desktop view */
 @media (min-width: 601px) {
   #result {
-    padding-top: 3.5rem;
+    padding-top: 3rem;
   }
   
   .result-close-btn {
@@ -251,37 +278,36 @@ h1 {
   }
 }
 
-/* Add new styles for title and description */
+/* Activity display styles */
 .activity-title {
-  font-size: 1.3rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
   color: var(--primary);
   font-weight: 600;
 }
 
 .activity-description {
-  font-size: 1.1rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.5;
   color: #444;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .activity-meta {
   display: flex;
-  gap: 10px;
-  margin-top: 0.5rem; /* Add some spacing between description and meta */
-  margin-bottom: 1.2rem;
-  font-size: 0.9rem;
+  gap: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
   color: #555;
   flex-wrap: wrap;
 }
 
 .meta-tag {
   background: var(--light);
-  padding: 0.35rem 0.7rem;
-  border-radius: 10px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
   border: 1px solid #dee2e6;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
 }
 
 .meta-tag.parent-energy {
@@ -300,22 +326,22 @@ h1 {
 
 .activity-benefits {
   background: #e8f4f8;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1.2rem;
-  font-size: 0.95rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
   color: #0c5460;
-  border-left: 4px solid var(--teal);
+  border-left: 3px solid var(--teal);
 }
 
 .prep-instructions {
   background: #fff3cd;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1.2rem;
-  font-size: 0.95rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
   color: #856404;
-  border-left: 4px solid var(--warning);
+  border-left: 3px solid var(--warning);
 }
 
 .prep-instructions strong {
@@ -324,33 +350,28 @@ h1 {
 
 .activity-actions {
   display: flex;
-  gap: 0.8rem;
+  gap: 0.6rem;
   flex-wrap: wrap;
 }
 
-.favorite-btn, .plan-btn {
+.favorite-btn {
   background-color: var(--warning);
   color: var(--dark);
   border: none;
-  padding: 0.8rem 1.2rem;
-  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s;
   flex: 1;
-  min-width: 140px;
-  font-size: 0.95rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  min-width: 120px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.plan-btn {
-  background-color: var(--teal);
-  color: white;
-}
-
-.favorite-btn:hover, .plan-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+.favorite-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .favorite-btn.saved {
@@ -358,103 +379,98 @@ h1 {
   color: white;
 }
 
-/* Tab system */
-.tab-buttons {
-  display: flex;
-  margin-bottom: 1.5rem;
-  gap: 0.3rem;
-  background: white;
-  padding: 0.3rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.tab-btn {
-  flex: 1;
-  border-radius: 10px;
-  background: transparent;
-  border: none;
-  padding: 0.8rem;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s;
-  position: relative;
-  font-size: 1rem;
-}
-
-.tab-btn.active {
-  background-color: var(--primary);
-  color: white;
-  box-shadow: 0 3px 10px rgba(67, 97, 238, 0.3);
-}
-
-.favorite-count {
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  background: var(--danger);
-  color: white;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  font-size: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
 /* Favorites */
 #favorites-list {
   background: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .favorite-item {
-  margin-bottom: 1.5rem;
-  padding: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   background: var(--light);
-  border-radius: 12px;
-  border-left: 5px solid var(--primary);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
 .favorite-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
 }
 
 .favorite-item h4 {
   color: var(--primary);
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1.1rem;
 }
 
 .favorite-item .activity-description {
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.do-activity-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 2;
+  min-width: 140px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 1;
+  min-width: 80px;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.do-activity-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.remove-btn:hover {
+  background: #bd2130;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 .loading, .error {
   text-align: center;
-  padding: 2rem;
+  padding: 1.5rem;
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .loading::after {
   content: "";
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border: 4px solid rgba(67, 97, 238, 0.3);
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(67, 97, 238, 0.3);
   border-radius: 50%;
   border-top-color: var(--primary);
   animation: spin 1s ease-in-out infinite;
-  margin-left: 12px;
+  margin-left: 10px;
   vertical-align: middle;
 }
 
@@ -473,85 +489,35 @@ input[type="radio"] {
 
 /* Helper text styling */
 .helper-text {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #666;
   font-style: italic;
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
 }
 
 .toast {
   position: fixed;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(0,0,0,0.85);
   color: white;
-  padding: 12px 24px;
-  border-radius: 30px;
+  padding: 10px 20px;
+  border-radius: 25px;
   z-index: 1000;
   opacity: 0;
   transition: opacity 0.3s;
-  font-size: 1rem;
+  font-size: 0.9rem;
   max-width: 90%;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
 
 .toast.show {
   opacity: 1;
 }
 
-.app-footer {
-  text-align: center;
-  padding: 1.2rem 0;
-  color: #666;
-  font-size: 0.85rem;
-  margin-top: 1.2rem;
-}
-
-/* New styles for favorites buttons */
-.do-activity-btn {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s;
-  flex: 2;
-  min-width: 180px;
-  font-size: 0.95rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-.remove-btn {
-  background: var(--danger);
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s;
-  flex: 1;
-  min-width: 110px;
-  font-size: 0.95rem;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-.do-activity-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-
-.remove-btn:hover {
-  background: #bd2130;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-}
-
-/* Modal Styles */
+/* Modal Styles - more compact */
 .modal {
   display: none;
   position: fixed;
@@ -566,20 +532,22 @@ input[type="radio"] {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
-  padding: 20px;
-  border-radius: 15px;
+  margin: 5% auto;
+  padding: 15px;
+  border-radius: 12px;
   max-width: 600px;
-  box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 10px;
+  right: 10px;
   color: #aaa;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
 }
@@ -591,22 +559,23 @@ input[type="radio"] {
 .modal h2 {
   color: var(--primary);
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 /* Compact Form in Modal */
 .compact-form {
   background: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 @media (max-width: 480px) {
@@ -616,37 +585,37 @@ input[type="radio"] {
 }
 
 .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #444;
 }
 
 select {
   width: 100%;
-  padding: 0.8rem;
+  padding: 0.7rem;
   border: 2px solid #e9ecef;
-  border-radius: 10px;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
   background: white;
   transition: all 0.3s;
-  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
 }
 
 select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
 }
 
 .radio-group {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -654,15 +623,15 @@ select:focus {
 .radio-btn {
   background: #f8f9fa;
   border: 2px solid #e9ecef;
-  padding: 0.6rem 1rem;
-  border-radius: 25px;
+  padding: 0.5rem 0.8rem;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   flex: 1;
   text-align: center;
   min-width: fit-content;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 
 .radio-btn.selected {
@@ -679,27 +648,27 @@ select:focus {
 .materials-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.6rem;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
   justify-content: center;
 }
 
 .material-tag {
   background: #f8f9fa;
   border: 2px solid #e9ecef;
-  padding: 0.4rem 0.8rem;
-  border-radius: 15px;
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 0.85rem;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-size: 0.8rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .material-tag.selected {
   background: var(--warning);
   border-color: var(--warning);
   color: var(--dark);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .material-tag:hover {
@@ -710,46 +679,85 @@ select:focus {
   background: var(--primary);
   color: white;
   border: none;
-  padding: 1rem;
-  border-radius: 12px;
+  padding: 0.9rem;
+  border-radius: 10px;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
   transition: all 0.3s;
 }
 
 .generate-btn:hover {
   background: var(--secondary);
-  transform: translateY(-3px);
-  box-shadow: 0 7px 18px rgba(67, 97, 238, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+}
+
+/* Footer - very compact */
+.app-footer {
+  text-align: center;
+  padding: 0.8rem 0;
+  color: #666;
+  font-size: 0.75rem;
+  margin-top: 0.8rem;
+}
+
+/* Mobile optimizations */
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+  
+  .compact-header {
+    padding: 0.6rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .quick-actions {
+    padding: 0.8rem;
+  }
+  
+  .quick-btn {
+    padding: 0.6rem;
+    min-height: 55px;
+    font-size: 0.75rem;
+  }
+  
+  .instant-btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .modal-content {
+    margin: 2% auto;
+    padding: 12px;
+  }
 }
 </style>
 </head>
 <body>
-<h1>🎮 PlayIdeas Activity Generator</h1>
-<div class="age-selector">
-  <h3>👶 How old is your child?</h3>
+<!-- Compact header with age selector only -->
+<div class="compact-header">
   <select id="age" onchange="handleAgeChange()">
-    <option value="0-2">Babies & Toddlers (0-2)</option>
-    <option value="3-5">Preschoolers (3-5)</option>
-    <option value="6-11">School Age (6-11)</option>
+    <option value="0-2">👶 Babies & Toddlers (0-2)</option>
+    <option value="3-5">🧒 Preschoolers (3-5)</option>
+    <option value="6-11">🎒 School Age (6-11)</option>
   </select>
 </div>
 
 <div class="tab-buttons">
-  <button class="tab-btn active" onclick="showTab('generator')">Get Ideas</button>
+  <button class="tab-btn active" onclick="showTab('generator')">🎲 Get Ideas</button>
   <button class="tab-btn" onclick="showTab('favorites')" id="favorites-tab-btn">
-    My Favorites
+    💖 Favorites
     <span class="favorite-count" id="favorite-count"></span>
   </button>
 </div>
 
 <div id="generator-tab">
   <div class="quick-actions">
-    <h2>🚀 Quick Activities</h2>
     <div class="quick-buttons">
       <button class="quick-btn low-energy" onclick="quickActivity('indoor', 'quick')">
         <span>🛋️</span>
@@ -769,10 +777,10 @@ select:focus {
       </button>
     </div>
     <button class="instant-btn" onclick="instantActivity()">
-      ✨ SURPRISE ME! (Any activity)
+      ✨ SURPRISE ME!
     </button>
     <button class="customize-btn" onclick="openCustomizeModal()">
-      ⚙️ Customize Options
+      ⚙️ More Options
     </button>
   </div>
 
@@ -869,7 +877,7 @@ select:focus {
 <div id="toast" class="toast"></div>
 
 <div class="app-footer">
-  Made with ❤️ by PlayIdeas • Activities loaded from JSON files
+  Made with ❤️ by PlayIdeas
 </div>
 
 <script>
