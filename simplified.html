@@ -1,0 +1,1413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PlayIdeas - Activity Generator for Parents</title>
+<style>
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --orange: #fd7e14;
+  --purple: #6f42c1;
+  --teal: #20c997;
+  --pink: #e83e8c;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f0f8ff;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #e6f7ff 0%, #f5f0ff 100%);
+  overflow-x: hidden;
+}
+h1 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Age selector */
+.age-selector {
+  background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
+  padding: 1.2rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2);
+}
+
+.age-selector h3 {
+  margin-bottom: 0.75rem;
+  color: #0277bd;
+  font-size: 1.2rem;
+}
+
+.age-selector select {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.85rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Simplified Quick Actions */
+.quick-actions {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.quick-actions h2 {
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.quick-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.quick-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+}
+
+.quick-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(67, 97, 238, 0.4);
+}
+
+.quick-btn.low-energy {
+  background: linear-gradient(135deg, var(--success), #20c997);
+}
+
+.quick-btn.quiet {
+  background: linear-gradient(135deg, var(--purple), #8e44ad);
+}
+
+.quick-btn.independent {
+  background: linear-gradient(135deg, var(--orange), #e17055);
+}
+
+.quick-btn.multiple-kids {
+  background: linear-gradient(135deg, var(--pink), #d63384);
+}
+
+.instant-btn {
+  background: linear-gradient(135deg, var(--success), #20c997);
+  padding: 1.1rem;
+  font-size: 1.1rem;
+  border-radius: 15px;
+  margin-top: 1rem;
+  box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
+  transition: all 0.3s;
+  width: 100%;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.instant-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(40, 167, 69, 0.4);
+}
+
+.customize-btn {
+  background: white;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 0.9rem;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+.customize-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Results */
+#result {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+  display: none;
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-close-btn {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background: #888;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 101;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.result-close-btn:hover {
+  background: #666;
+}
+
+/* Mobile Modal Styling */
+@media (max-width: 600px) {
+  #result {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    border-radius: 0;
+    z-index: 100;
+    overflow-y: auto;
+    padding-top: 60px;
+  }
+  
+  .result-close-btn {
+    position: fixed;
+  }
+}
+
+/* Adjust padding for desktop view */
+@media (min-width: 601px) {
+  #result {
+    padding-top: 3.5rem;
+  }
+  
+  .result-close-btn {
+    position: absolute;
+  }
+}
+
+/* Add new styles for title and description */
+.activity-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.activity-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.activity-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.5rem; /* Add some spacing between description and meta */
+  margin-bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: #555;
+  flex-wrap: wrap;
+}
+
+.meta-tag {
+  background: var(--light);
+  padding: 0.35rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  font-size: 0.8rem;
+}
+
+.meta-tag.parent-energy {
+  background: #fff3cd;
+  border-color: #ffeaa7;
+  color: #856404;
+}
+
+.meta-tag.cleanup-no { background: #d4edda; color: #155724; }
+.meta-tag.cleanup-easy { background: #fff3cd; color: #856404; }
+.meta-tag.cleanup-messy { background: #f8d7da; color: #721c24; }
+
+.meta-tag.involvement-minimal { background: #d4edda; color: #155724; }
+.meta-tag.involvement-some { background: #fff3cd; color: #856404; }
+.meta-tag.involvement-active { background: #f8d7da; color: #721c24; }
+
+.activity-benefits {
+  background: #e8f4f8;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  color: #0c5460;
+  border-left: 4px solid var(--teal);
+}
+
+.prep-instructions {
+  background: #fff3cd;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.2rem;
+  font-size: 0.95rem;
+  color: #856404;
+  border-left: 4px solid var(--warning);
+}
+
+.prep-instructions strong {
+  color: #533f03;
+}
+
+.activity-actions {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.favorite-btn, .plan-btn {
+  background-color: var(--warning);
+  color: var(--dark);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 1;
+  min-width: 140px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.plan-btn {
+  background-color: var(--teal);
+  color: white;
+}
+
+.favorite-btn:hover, .plan-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.favorite-btn.saved {
+  background-color: var(--success);
+  color: white;
+}
+
+/* Tab system */
+.tab-buttons {
+  display: flex;
+  margin-bottom: 1.5rem;
+  gap: 0.3rem;
+  background: white;
+  padding: 0.3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tab-btn {
+  flex: 1;
+  border-radius: 10px;
+  background: transparent;
+  border: none;
+  padding: 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 1rem;
+}
+
+.tab-btn.active {
+  background-color: var(--primary);
+  color: white;
+  box-shadow: 0 3px 10px rgba(67, 97, 238, 0.3);
+}
+
+.favorite-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--danger);
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Favorites */
+#favorites-list {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.favorite-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: var(--light);
+  border-radius: 12px;
+  border-left: 5px solid var(--primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.favorite-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.favorite-item h4 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.favorite-item .activity-description {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.loading::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 4px solid rgba(67, 97, 238, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary);
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error {
+  color: var(--danger);
+}
+
+/* Hide native radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Helper text styling */
+.helper-text {
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 1rem;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.toast.show {
+  opacity: 1;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.2rem 0;
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 1.2rem;
+}
+
+/* New styles for favorites buttons */
+.do-activity-btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 2;
+  min-width: 180px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.remove-btn {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  flex: 1;
+  min-width: 110px;
+  font-size: 0.95rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.do-activity-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.remove-btn:hover {
+  background: #bd2130;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2000;
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 600px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: black;
+}
+
+.modal h2 {
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Compact Form in Modal */
+.compact-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+}
+
+.radio-group {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radio-btn {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  flex: 1;
+  text-align: center;
+  min-width: fit-content;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.radio-btn.selected {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.radio-btn:hover {
+  border-color: var(--primary);
+}
+
+/* Materials as tags */
+.materials-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.6rem;
+  justify-content: center;
+}
+
+.material-tag {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.85rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.material-tag.selected {
+  background: var(--warning);
+  border-color: var(--warning);
+  color: var(--dark);
+  transform: translateY(-2px);
+}
+
+.material-tag:hover {
+  border-color: var(--warning);
+}
+
+.generate-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 100%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+  transition: all 0.3s;
+}
+
+.generate-btn:hover {
+  background: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 7px 18px rgba(67, 97, 238, 0.4);
+}
+</style>
+</head>
+<body>
+<h1>🎮 PlayIdeas Activity Generator</h1>
+<div class="age-selector">
+  <h3>👶 How old is your child?</h3>
+  <select id="age" onchange="handleAgeChange()">
+    <option value="0-2">Babies & Toddlers (0-2)</option>
+    <option value="3-5">Preschoolers (3-5)</option>
+    <option value="6-11">School Age (6-11)</option>
+  </select>
+</div>
+
+<div class="tab-buttons">
+  <button class="tab-btn active" onclick="showTab('generator')">Get Ideas</button>
+  <button class="tab-btn" onclick="showTab('favorites')" id="favorites-tab-btn">
+    My Favorites
+    <span class="favorite-count" id="favorite-count"></span>
+  </button>
+</div>
+
+<div id="generator-tab">
+  <div class="quick-actions">
+    <h2>🚀 Quick Activities</h2>
+    <div class="quick-buttons">
+      <button class="quick-btn low-energy" onclick="quickActivity('indoor', 'quick')">
+        <span>🛋️</span>
+        <span>Easy Indoor</span>
+      </button>
+      <button class="quick-btn independent" onclick="quickActivity('any', 'any', 'independent')">
+        <span>🧒</span>
+        <span>Independent</span>
+      </button>
+      <button class="quick-btn quiet" onclick="quickActivity('indoor', 'any', 'quiet')">
+        <span>🤫</span>
+        <span>Quiet Time</span>
+      </button>
+      <button class="quick-btn multiple-kids" onclick="quickActivity('any', 'any', 'multiple')">
+        <span>👥</span>
+        <span>Multiple Kids</span>
+      </button>
+    </div>
+    <button class="instant-btn" onclick="instantActivity()">
+      ✨ SURPRISE ME! (Any activity)
+    </button>
+    <button class="customize-btn" onclick="openCustomizeModal()">
+      ⚙️ Customize Options
+    </button>
+  </div>
+
+  <div id="result">
+    <div class="loading">Loading activities</div>
+  </div>
+</div>
+
+<div id="favorites-tab" style="display: none;">
+  <div id="favorites-list">
+    <p class="loading">Loading favorites</p>
+  </div>
+</div>
+
+<!-- Customize Modal -->
+<div id="customize-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeCustomizeModal()">&times;</span>
+    <h2>⚙️ Customize Options</h2>
+    
+    <div class="compact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Number of Kids:</label>
+          <div class="radio-group">
+            <div class="radio-btn selected" data-name="kid-count" data-value="single">👤 One</div>
+            <div class="radio-btn" data-name="kid-count" data-value="multiple">👥 Multiple</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Location:</label>
+          <div class="radio-group">
+            <div class="radio-btn selected" data-name="location" data-value="indoor">🏠 Indoor</div>
+            <div class="radio-btn" data-name="location" data-value="outdoor">🌳 Outdoor</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Duration:</label>
+          <div class="radio-group">
+            <div class="radio-btn selected" data-name="duration" data-value="quick">⏱️ Quick</div>
+            <div class="radio-btn" data-name="duration" data-value="medium">⏳ Medium</div>
+            <div class="radio-btn" data-name="duration" data-value="long">⌛ Long</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Your involvement:</label>
+          <div class="radio-group">
+            <div class="radio-btn selected" data-name="availability" data-value="available">👨‍👧 Can help</div>
+            <div class="radio-btn" data-name="availability" data-value="independent">🧒 Independent</div>
+          </div>
+          <div class="helper-text">Independent = activities your child can do mostly alone</div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Clean-up level:</label>
+          <div class="radio-group">
+            <div class="radio-btn selected" data-name="cleanup" data-value="any">🤷 Any</div>
+            <div class="radio-btn" data-name="cleanup" data-value="no-mess">✨ No mess</div>
+            <div class="radio-btn" data-name="cleanup" data-value="easy">🧹 Easy</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>What do you have handy? (tap any that apply)</label>
+        <div class="materials-tags">
+          <div class="material-tag" data-value="paper">📄 Paper</div>
+          <div class="material-tag" data-value="pencils">✏️ Pencils</div>
+          <div class="material-tag" data-value="scissors">✂️ Scissors</div>
+          <div class="material-tag" data-value="tape">📏 Tape/Glue</div>
+          <div class="material-tag" data-value="ball">🏀 Ball</div>
+          <div class="material-tag" data-value="blocks">🧱 Blocks</div>
+          <div class="material-tag" data-value="dolls">🧸 Toys</div>
+          <div class="material-tag" data-value="cards">🃏 Cards</div>
+          <div class="material-tag" data-value="none">❌ Nothing special</div>
+        </div>
+        <div class="helper-text">Select "Nothing special" if you want activities that need no materials</div>
+      </div>
+
+      <button class="generate-btn" onclick="generateActivity(); closeCustomizeModal();">
+        🎲 Generate Custom Activity
+      </button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<div class="app-footer">
+  Made with ❤️ by PlayIdeas • Activities loaded from JSON files
+</div>
+
+<script>
+// Global variables
+let activities = [];
+let allActivities = {};
+let favorites = [];
+let currentActivity = null;
+let activitiesLoaded = false;
+
+// Map age groups to JSON filenames
+const ageGroupFiles = {
+  "0-2": "activities-0-2.json",
+  "3-5": "activities-3-5.json",
+  "6-11": "activities-6-8.json"
+};
+
+// HTML escaping function for security
+function escapeHtml(unsafe) {
+  if (!unsafe) return '';
+  return unsafe.toString()
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+// Show toast notification
+function showToast(message, duration = 3000) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, duration);
+}
+
+// Update favorite count badge
+function updateFavoriteCount() {
+  const countElem = document.getElementById('favorite-count');
+  if (favorites.length > 0) {
+    countElem.textContent = favorites.length;
+    countElem.style.display = 'flex';
+  } else {
+    countElem.style.display = 'none';
+  }
+}
+
+// Close result modal
+function closeResultModal() {
+  document.getElementById('result').style.display = 'none';
+}
+
+// Open customize modal
+function openCustomizeModal() {
+  document.getElementById('customize-modal').style.display = 'block';
+}
+
+// Close customize modal
+function closeCustomizeModal() {
+  document.getElementById('customize-modal').style.display = 'none';
+}
+
+// Load activities for specific age group from JSON files
+async function loadActivities(ageGroup) {
+  if (allActivities[ageGroup]) {
+    activities = allActivities[ageGroup];
+    activitiesLoaded = true;
+    return;
+  }
+
+  try {
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `<div class="loading">Loading activities for ${ageGroup} years</div>`;
+    resultDiv.style.display = "block";
+
+    // Get the filename for this age group
+    const filename = ageGroupFiles[ageGroup];
+    if (!filename) {
+      throw new Error(`No JSON file defined for age group: ${ageGroup}`);
+    }
+
+    // Fetch the JSON file
+    const response = await fetch(filename);
+    if (!response.ok) {
+      throw new Error(`Failed to load activities: ${response.status} ${response.statusText}`);
+    }
+
+    // Parse the JSON and extract the activities array
+    const data = await response.json();
+    activities = data.activities; // Extract the activities array
+    allActivities[ageGroup] = activities;
+    activitiesLoaded = true;
+
+    resultDiv.style.display = "none";
+
+  } catch (error) {
+    console.error(`Error loading activities for ${ageGroup}:`, error);
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `
+      <div class="error">
+        <h3 style="color: var(--danger); margin-bottom: 1.2rem;">😞 Oops! Couldn't load activities</h3>
+        <p style="margin-bottom: 1.2rem;">Error: ${error.message}</p>
+        <p style="font-size: 1rem; color: #666; margin-bottom: 1.5rem;">Make sure the JSON files are in the same folder as this HTML file.</p>
+        <div style="text-align: center;">
+          <button onclick="location.reload()" style="background: var(--primary); color: white; border: none; padding: 0.9rem 1.8rem; border-radius: 10px; cursor: pointer; font-size: 1.1rem; font-weight: 600;">
+            🔄 Try Again
+          </button>
+        </div>
+      </div>
+    `;
+    resultDiv.style.display = "block";
+    activitiesLoaded = false;
+  }
+}
+
+// Handle radio button groups and selections
+document.addEventListener('click', function(e) {
+  if (e.target.classList.contains('radio-btn')) {
+    const group = e.target.getAttribute('data-name');
+    const value = e.target.getAttribute('data-value');
+
+    const siblings = e.target.parentElement.querySelectorAll('.radio-btn');
+    siblings.forEach(btn => btn.classList.remove('selected'));
+    e.target.classList.add('selected');
+  }
+
+  if (e.target.classList.contains('material-tag')) {
+    e.target.classList.toggle('selected');
+  }
+});
+
+// Get form values
+function getFormValues() {
+  const age = document.getElementById('age').value;
+  const kidCount = document.querySelector('.radio-btn[data-name="kid-count"].selected')?.getAttribute('data-value') || 'single';
+  const location = document.querySelector('.radio-btn[data-name="location"].selected')?.getAttribute('data-value') || 'indoor';
+  const duration = document.querySelector('.radio-btn[data-name="duration"].selected')?.getAttribute('data-value') || 'quick';
+  const availability = document.querySelector('.radio-btn[data-name="availability"].selected')?.getAttribute('data-value') || 'available';
+  const cleanup = document.querySelector('.radio-btn[data-name="cleanup"].selected')?.getAttribute('data-value') || 'any';
+
+  const selectedMaterials = Array.from(document.querySelectorAll('.material-tag.selected'))
+    .map(tag => tag.getAttribute('data-value'));
+
+  return {
+    age,
+    kidCount,
+    location,
+    duration,
+    availability,
+    cleanup,
+    materials: selectedMaterials
+  };
+}
+
+// Filter activities based on criteria
+function filterActivities(criteria) {
+  if (!activities || activities.length === 0) return [];
+
+  return activities.filter(activity => {
+    // Location filter
+    if (criteria.location !== 'any' && activity.location !== 'any' && activity.location !== criteria.location) {
+      return false;
+    }
+
+    // Duration filter
+    if (criteria.duration !== 'any' && activity.duration !== 'any' && activity.duration !== criteria.duration) {
+      return false;
+    }
+
+    // Kid count filter
+    if (criteria.kidCount === 'multiple' && activity.kid_count === 'single') {
+      return false;
+    }
+
+    // Parent availability filter (independent vs needs supervision)
+    if (criteria.availability === 'independent' && !activity.independent) {
+      return false;
+    }
+
+    // Cleanup filter
+    if (criteria.cleanup === 'no-mess' && activity.cleanup !== 'no') {
+      return false;
+    }
+    if (criteria.cleanup === 'easy' && activity.cleanup === 'messy') {
+      return false;
+    }
+
+    // Materials filter
+    if (criteria.materials.includes('none')) {
+      return activity.materials.includes('none');
+    }
+
+    if (criteria.materials.length > 0 && !criteria.materials.includes('none')) {
+      const activityMaterials = activity.materials || [];
+      if (activityMaterials.includes('none')) {
+        return true; // Activity needs no materials, so it's always available
+      }
+      const hasRequiredMaterials = activityMaterials.some(material => 
+        criteria.materials.some(available => 
+          material.toLowerCase().includes(available) || 
+          available.includes(material.toLowerCase())
+        )
+      );
+      if (activityMaterials.length > 0 && !hasRequiredMaterials) {
+        return false;
+      }
+    }
+
+    // Noise level filter for quiet activities
+    if (criteria.noiseLevel && activity.noise_level !== criteria.noiseLevel) {
+      return false;
+    }
+
+    return true;
+  });
+}
+
+// Display activity result
+function displayActivity(activity) {
+  if (!activity) {
+    document.getElementById('result').innerHTML = `
+      <div class="error">
+        <h3>😅 No activities found!</h3>
+        <p>Try adjusting your filters or selecting different materials.</p>
+      </div>
+    `;
+    document.getElementById('result').style.display = 'block';
+    return;
+  }
+
+  currentActivity = activity;
+
+  const cleanupLabels = {
+    'no': 'No cleanup needed',
+    'easy': 'Easy cleanup',
+    'messy': 'Some cleanup needed'
+  };
+
+  const involvementLabels = {
+    'minimal': 'Minimal supervision',
+    'some': 'Some guidance needed',
+    'active': 'Active participation'
+  };
+
+  const resultHtml = `
+    <button class="result-close-btn" onclick="closeResultModal()">×</button>
+    <h3 class="activity-title">${escapeHtml(activity.title)}</h3>
+    <div class="activity-description">${escapeHtml(activity.description)}</div>
+
+    <div class="activity-meta">
+      <span class="meta-tag parent-energy">👨‍👧 ${activity.independent ? 'Independent play' : involvementLabels[activity.involvement] || 'Some help needed'}</span>
+      <span class="meta-tag cleanup-${activity.cleanup}">${cleanupLabels[activity.cleanup] || 'Unknown cleanup'}</span>
+      <span class="meta-tag">⏱️ ${activity.duration} activity</span>
+      <span class="meta-tag">📍 ${activity.location}</span>
+      ${activity.kid_count === 'multiple' ? '<span class="meta-tag">👥 Great for multiple kids</span>' : ''}
+    </div>
+
+    ${activity.benefits ? `
+      <div class="activity-benefits">
+        <strong>🌟 Benefits:</strong> ${escapeHtml(activity.benefits)}
+      </div>
+    ` : ''}
+
+    ${activity.prep ? `
+      <div class="prep-instructions">
+        <strong>📝 How to set up:</strong><br>
+        ${escapeHtml(activity.prep)}
+      </div>
+    ` : ''}
+
+    <div class="activity-actions">
+      <button class="favorite-btn" onclick="toggleFavorite()">
+        ${favorites.some(fav => fav.compositeId === activity.compositeId) ? '💝 Saved!' : '💖 Save as Favorite'}
+      </button>
+    </div>
+  `;
+
+  document.getElementById('result').innerHTML = resultHtml;
+  document.getElementById('result').style.display = 'block';
+  document.getElementById('result').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Generate activity
+async function generateActivity() {
+  const criteria = getFormValues();
+
+  await loadActivities(criteria.age);
+
+  if (!activitiesLoaded) {
+    return;
+  }
+
+  const filteredActivities = filterActivities(criteria);
+
+  if (filteredActivities.length === 0) {
+    displayActivity(null);
+    return;
+  }
+
+  const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
+  randomActivity.compositeId = `${criteria.age}-${randomActivity.id}`; // Add composite ID
+  displayActivity(randomActivity);
+}
+
+// Quick activity functions
+async function quickActivity(location, duration, special) {
+  const criteria = {
+    age: document.getElementById('age').value,
+    location: location || 'any',
+    duration: duration || 'any',
+    kidCount: special === 'multiple' ? 'multiple' : 'single',
+    availability: special === 'independent' ? 'independent' : 'available',
+    cleanup: special === 'no-mess' ? 'no-mess' : 'any',
+    materials: [],
+    noiseLevel: special === 'quiet' ? 'quiet' : undefined
+  };
+
+  await loadActivities(criteria.age);
+
+  if (!activitiesLoaded) return;
+
+  const filteredActivities = filterActivities(criteria);
+
+  if (filteredActivities.length === 0) {
+    displayActivity(null);
+    return;
+  }
+
+  const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
+  randomActivity.compositeId = `${criteria.age}-${randomActivity.id}`; // Add composite ID
+  displayActivity(randomActivity);
+}
+
+async function instantActivity() {
+  const criteria = {
+    age: document.getElementById('age').value,
+    location: 'any',
+    duration: 'any',
+    kidCount: 'any',
+    availability: 'any',
+    cleanup: 'any',
+    materials: [],
+    noiseLevel: undefined
+  };
+
+  await loadActivities(criteria.age);
+
+  if (!activitiesLoaded) return;
+
+  const filteredActivities = filterActivities(criteria);
+  const randomActivity = filteredActivities[Math.floor(Math.random() * filteredActivities.length)];
+  randomActivity.compositeId = `${criteria.age}-${randomActivity.id}`; // Add composite ID
+  displayActivity(randomActivity);
+}
+
+// Handle age change
+function handleAgeChange() {
+  const newAge = document.getElementById('age').value;
+  activitiesLoaded = false;
+  activities = [];
+}
+
+// Favorites functionality
+function toggleFavorite() {
+  if (!currentActivity) return;
+
+  // Create composite key using age group + ID
+  const age = document.getElementById('age').value;
+  currentActivity.compositeId = `${age}-${currentActivity.id}`;
+
+  const existingIndex = favorites.findIndex(fav => fav.compositeId === currentActivity.compositeId);
+
+  if (existingIndex >= 0) {
+    favorites.splice(existingIndex, 1);
+    showToast('Removed from favorites');
+  } else {
+    favorites.push({
+      ...currentActivity,
+      compositeId: currentActivity.compositeId,
+      ageGroup: age
+    });
+    showToast('Added to favorites');
+  }
+
+  try {
+    localStorage.setItem('playideas-favorites', JSON.stringify(favorites));
+  } catch (e) {
+    console.log('LocalStorage not available');
+  }
+
+  updateFavoriteButton();
+  updateFavoriteCount();
+}
+
+function updateFavoriteButton() {
+  const btn = document.querySelector('.favorite-btn');
+  if (btn && currentActivity) {
+    const isFavorite = favorites.some(fav => fav.compositeId === currentActivity.compositeId);
+    btn.textContent = isFavorite ? '💝 Saved!' : '💖 Save as Favorite';
+    btn.classList.toggle('saved', isFavorite);
+  }
+}
+
+// Tab functionality
+function showTab(tabName) {
+  // Hide all tabs
+  document.getElementById('generator-tab').style.display = 'none';
+  document.getElementById('favorites-tab').style.display = 'none';
+  
+  // Remove active class from all tab buttons
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  tabButtons.forEach(btn => btn.classList.remove('active'));
+  
+  // Show selected tab
+  document.getElementById(`${tabName}-tab`).style.display = 'block';
+  
+  // Find and activate the button that corresponds to this tab
+  const tabButton = document.querySelector(`.tab-btn[onclick="showTab('${tabName}')"]`);
+  if (tabButton) {
+    tabButton.classList.add('active');
+  }
+  
+  // Load content for the tab
+  if (tabName === 'favorites') {
+    displayFavorites();
+  }
+}
+
+// Display favorites
+function displayFavorites() {
+  const container = document.getElementById('favorites-list');
+  
+  if (favorites.length === 0) {
+    container.innerHTML = `
+      <div style="text-align: center; padding: 2rem; color: #666;">
+        <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">💖 No favorites yet!</h3>
+        <p style="font-size: 1rem;">Save activities you love by clicking the "Save as Favorite" button.</p>
+      </div>
+    `;
+    return;
+  }
+  
+  container.innerHTML = '';
+  
+  favorites.forEach(activity => {
+    const favElement = document.createElement('div');
+    favElement.className = 'favorite-item';
+    favElement.innerHTML = `
+      <h4>${escapeHtml(activity.title)}</h4>
+      <div class="activity-description">${escapeHtml(activity.description)}</div>
+      <div class="activity-meta">
+        <span class="meta-tag">${activity.ageGroup} years</span>
+        <span class="meta-tag">${activity.location === 'indoor' ? '🏠 Indoor' : '🌳 Outdoor'}</span>
+        <span class="meta-tag">${getDurationLabel(activity.duration)}</span>
+      </div>
+      <div class="activity-actions">
+        <button class="do-activity-btn" onclick="loadFavorite('${activity.compositeId}')">🎮 Do This Activity</button>
+        <button class="remove-btn" onclick="removeFavorite('${activity.compositeId}')">🗑️ Remove</button>
+      </div>
+    `;
+    container.appendChild(favElement);
+  });
+}
+
+function getDurationLabel(duration) {
+  switch (duration) {
+    case 'quick': return '⏱️ Quick';
+    case 'medium': return '⏳ Medium';
+    case 'long': return '⌛ Long';
+    default: return duration;
+  }
+}
+
+function removeFavorite(compositeId) {
+  const index = favorites.findIndex(fav => fav.compositeId === compositeId);
+  if (index >= 0) {
+    favorites.splice(index, 1);
+    localStorage.setItem('playideas-favorites', JSON.stringify(favorites));
+    updateFavoriteCount();
+    displayFavorites();
+    showToast('Removed from favorites');
+    
+    // If this was the current activity, update its button
+    if (currentActivity && currentActivity.compositeId === compositeId) {
+      updateFavoriteButton();
+    }
+  }
+}
+
+function loadFavorite(compositeId) {
+  const activity = favorites.find(fav => fav.compositeId === compositeId);
+  if (activity) {
+    // Set the age group
+    document.getElementById('age').value = activity.ageGroup;
+    
+    // Show the generator tab
+    showTab('generator');
+    
+    // Set as current activity and display
+    setTimeout(() => {
+      currentActivity = activity;
+      displayActivity(activity);
+    }, 100);
+  }
+}
+
+// Initialize app
+function init() {
+  try {
+    // Load favorites
+    const savedFavorites = localStorage.getItem('playideas-favorites');
+    if (savedFavorites) {
+      favorites = JSON.parse(savedFavorites);
+    }
+    
+    updateFavoriteCount();
+    
+  } catch (e) {
+    console.log('LocalStorage not available, using defaults');
+  }
+  
+  // Load initial activities for default age
+  loadActivities('3-5');
+  
+  // Close modal when clicking outside content
+  window.addEventListener('click', function(event) {
+    const modal = document.getElementById('customize-modal');
+    if (event.target === modal) {
+      closeCustomizeModal();
+    }
+  });
+}
+
+// Start the app
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
