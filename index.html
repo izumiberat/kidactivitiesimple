@@ -72,92 +72,6 @@ h1 {
   margin: 0 auto;
   display: block;
 }
-  
-/* Parent Energy Indicator */
-.energy-check {
-  background: linear-gradient(135deg, #ffecd2, #ffd8a8);
-  padding: 1.2rem;
-  border-radius: 15px;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(255, 184, 77, 0.2);
-}
-
-.energy-check h3 {
-  margin-bottom: 0.75rem;
-  color: #d35400;
-  font-size: 1.2rem;
-}
-
-.energy-buttons {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.energy-btn {
-  background: white;
-  border: 2px solid #ddd;
-  padding: 0.6rem 1.2rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-size: 0.95rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.energy-btn.selected {
-  background: var(--orange);
-  border-color: var(--orange);
-  color: white;
-  font-weight: 600;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(253, 126, 20, 0.3);
-}
-
-/* Context Mode Selector */
-.context-selector {
-  background: white;
-  padding: 1.2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  margin-bottom: 1.5rem;
-  text-align: center;
-}
-
-.context-selector h3 {
-  margin-bottom: 0.75rem;
-  color: var(--primary);
-  font-size: 1.2rem;
-}
-
-.context-buttons {
-  display: flex;
-  gap: 0.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.context-btn {
-  background: #f8f9fa;
-  border: 2px solid #e9ecef;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.context-btn.selected {
-  background: var(--teal);
-  border-color: var(--teal);
-  color: white;
-  font-weight: 600;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(32, 201, 151, 0.3);
-}
 
 /* Simplified Quick Actions */
 .quick-actions {
@@ -816,25 +730,6 @@ select:focus {
   </select>
 </div>
 
-<div class="energy-check">
-  <h3>☕ How's your energy level today?</h3>
-  <div class="energy-buttons">
-    <div class="energy-btn selected" data-energy="low">😴 Exhausted</div>
-    <div class="energy-btn" data-energy="medium">🙂 Medium</div>
-    <div class="energy-btn" data-energy="high">⚡ Ready!</div>
-  </div>
-</div>
-
-<div class="context-selector">
-  <h3>🌟 What's the situation?</h3>
-  <div class="context-buttons">
-    <div class="context-btn selected" data-context="normal">📅 Regular day</div>
-    <div class="context-btn" data-context="rainy">🌧️ Rainy day</div>
-    <div class="context-btn" data-context="sick">🤒 Sick day</div>
-    <div class="context-btn" data-context="bedtime">🌙 Pre-bedtime</div>
-  </div>
-</div>
-
 <div class="tab-buttons">
   <button class="tab-btn active" onclick="showTab('generator')">Get Ideas</button>
   <button class="tab-btn" onclick="showTab('favorites')" id="favorites-tab-btn">
@@ -847,7 +742,7 @@ select:focus {
   <div class="quick-actions">
     <h2>🚀 Quick Activities</h2>
     <div class="quick-buttons">
-      <button class="quick-btn low-energy" onclick="quickActivity('indoor', 'quick', 'low')">
+      <button class="quick-btn low-energy" onclick="quickActivity('indoor', 'quick')">
         <span>🛋️</span>
         <span>Easy Indoor</span>
       </button>
@@ -975,8 +870,6 @@ let allActivities = {};
 let favorites = [];
 let currentActivity = null;
 let activitiesLoaded = false;
-let parentEnergyLevel = 'low';
-let currentContext = 'normal';
 
 // Map age groups to JSON filenames
 const ageGroupFiles = {
@@ -1100,34 +993,6 @@ document.addEventListener('click', function(e) {
   if (e.target.classList.contains('material-tag')) {
     e.target.classList.toggle('selected');
   }
-
-  if (e.target.classList.contains('energy-btn')) {
-    parentEnergyLevel = e.target.getAttribute('data-energy');
-
-    const siblings = e.target.parentElement.querySelectorAll('.energy-btn');
-    siblings.forEach(btn => btn.classList.remove('selected'));
-    e.target.classList.add('selected');
-
-    try {
-      localStorage.setItem('playideas-energy-level', parentEnergyLevel);
-    } catch (e) {
-      console.log('LocalStorage not available');
-    }
-  }
-
-  if (e.target.classList.contains('context-btn')) {
-    currentContext = e.target.getAttribute('data-context');
-
-    const siblings = e.target.parentElement.querySelectorAll('.context-btn');
-    siblings.forEach(btn => btn.classList.remove('selected'));
-    e.target.classList.add('selected');
-
-    try {
-      localStorage.setItem('playideas-context', currentContext);
-    } catch (e) {
-      console.log('LocalStorage not available');
-    }
-  }
 });
 
 // Get form values
@@ -1149,9 +1014,7 @@ function getFormValues() {
     duration,
     availability,
     cleanup,
-    materials: selectedMaterials,
-    parentEnergy: parentEnergyLevel,
-    context: currentContext
+    materials: selectedMaterials
   };
 }
 
@@ -1209,21 +1072,8 @@ function filterActivities(criteria) {
       }
     }
 
-    // Context-specific filtering
-    if (criteria.context !== 'normal' && activity.contexts && !activity.contexts.includes(criteria.context)) {
-      return false;
-    }
-
-    // Parent energy level filter
-    if (criteria.parentEnergy === 'low' && activity.energy_required === 'high') {
-      return false;
-    }
-
-    // Special context filters
-    if (criteria.context === 'quiet' && activity.noise_level === 'loud') {
-      return false;
-    }
-    if (criteria.context === 'bedtime' && (activity.energy_required === 'high' || activity.noise_level === 'loud')) {
+    // Noise level filter for quiet activities
+    if (criteria.noiseLevel && activity.noise_level !== criteria.noiseLevel) {
       return false;
     }
 
@@ -1329,8 +1179,7 @@ async function quickActivity(location, duration, special) {
     availability: special === 'independent' ? 'independent' : 'available',
     cleanup: special === 'no-mess' ? 'no-mess' : 'any',
     materials: [],
-    parentEnergy: parentEnergyLevel,
-    context: special === 'quiet' ? 'quiet' : currentContext
+    noiseLevel: special === 'quiet' ? 'quiet' : undefined
   };
 
   await loadActivities(criteria.age);
@@ -1358,8 +1207,7 @@ async function instantActivity() {
     availability: 'any',
     cleanup: 'any',
     materials: [],
-    parentEnergy: parentEnergyLevel,
-    context: currentContext
+    noiseLevel: undefined
   };
 
   await loadActivities(criteria.age);
@@ -1530,25 +1378,6 @@ function init() {
     const savedFavorites = localStorage.getItem('playideas-favorites');
     if (savedFavorites) {
       favorites = JSON.parse(savedFavorites);
-    }
-    
-    // Load energy level
-    const savedEnergy = localStorage.getItem('playideas-energy-level');
-    if (savedEnergy) {
-      parentEnergyLevel = savedEnergy;
-      document.querySelector(`.energy-btn[data-energy="${savedEnergy}"]`)?.classList.add('selected');
-      document.querySelectorAll('.energy-btn').forEach(btn => {
-        if (btn.getAttribute('data-energy') !== savedEnergy) {
-          btn.classList.remove('selected');
-        }
-      });
-    }
-    
-    // Load context
-    const savedContext = localStorage.getItem('playideas-context');
-    if (savedContext) {
-      currentContext = savedContext;
-      document.querySelector(`.context-btn[data-context="${savedContext}"]`)?.classList.add('selected');
     }
     
     updateFavoriteCount();
