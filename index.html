@@ -1094,6 +1094,7 @@ function filterActivities(criteria) {
 function displayActivity(activity) {
   if (!activity) {
     document.getElementById('result').innerHTML = `
+      <button class="result-close-btn" onclick="closeResultModal()">×</button>
       <div class="error">
         <h3>😅 No activities found!</h3>
         <p>Try adjusting your filters or selecting different materials.</p>
