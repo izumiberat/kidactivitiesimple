@@ -42,10 +42,10 @@ h1 {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Updated Age selector buttons */
+/* Updated Age selector buttons - COMPACT MOBILE VERSION */
 .age-selector {
   background: linear-gradient(135deg, #e1f5fe, #b3e5fc);
-  padding: 1.2rem;
+  padding: 1rem;
   border-radius: 15px;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -61,7 +61,7 @@ h1 {
 .age-buttons {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.5rem;
+  gap: 0.4rem;
   margin-top: 0.5rem;
 }
 
@@ -69,13 +69,28 @@ h1 {
   background: white;
   color: var(--primary);
   border: 2px solid var(--primary);
-  padding: 0.6rem 0.4rem;
+  padding: 0.5rem 0.3rem;
   border-radius: 10px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.age-btn .emoji {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.age-btn .age-text {
+  font-size: 0.75rem;
+  line-height: 1.2;
 }
 
 .age-btn:hover {
@@ -90,7 +105,20 @@ h1 {
 
 @media (max-width: 480px) {
   .age-buttons {
-    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+  
+  .age-btn {
+    padding: 0.4rem 0.2rem;
+    min-height: 45px;
+  }
+  
+  .age-btn .emoji {
+    font-size: 1.2rem;
+  }
+  
+  .age-btn .age-text {
+    font-size: 0.7rem;
   }
 }
 
@@ -753,9 +781,18 @@ select:focus {
 <div class="age-selector">
   <h3>PlayIdeas</h3>
   <div class="age-buttons">
-    <button class="age-btn" data-age="0-2" onclick="handleAgeButtonClick('0-2')">👶 Babies & Toddlers (0-2)</button>
-    <button class="age-btn active" data-age="3-5" onclick="handleAgeButtonClick('3-5')">🧒 Preschoolers (3-5)</button>
-    <button class="age-btn" data-age="6-11" onclick="handleAgeButtonClick('6-11')">🎒 School Age (6-11)</button>
+    <button class="age-btn" data-age="0-2" onclick="handleAgeButtonClick('0-2')">
+      <span class="emoji">👶</span>
+      <span class="age-text">0-2</span>
+    </button>
+    <button class="age-btn active" data-age="3-5" onclick="handleAgeButtonClick('3-5')">
+      <span class="emoji">🧒</span>
+      <span class="age-text">3-5</span>
+    </button>
+    <button class="age-btn" data-age="6-11" onclick="handleAgeButtonClick('6-11')">
+      <span class="emoji">🎒</span>
+      <span class="age-text">6-11</span>
+    </button>
   </div>
 </div>
 
