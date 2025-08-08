@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kid Activity Finder | App Preview</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #ff9a8b;
+            --accent: #6d9dc5;
+            --light: #f9f7f7;
+            --dark: #2b2d42;
+            --success: #9bc53d;
+            --warning: #fde74c;
+            --danger: #e55934;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            background-color: #ff7b6b;
+        }
+        
+        .filters-section {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .filter-group {
+            margin-bottom: 15px;
+        }
+        
+        .filter-group h3 {
+            margin-bottom: 12px;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .filter-btn {
+            background: #eef2f7;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+        
+        .filter-btn:hover {
+            background: #dde5f0;
+        }
+        
+        .filter-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .activity-counter {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+        
+        .activity-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--accent), #8ab6d6);
+            color: white;
+            padding: 20px;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .card-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+            font-size: 0.85rem;
+        }
+        
+        .meta-item {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .card-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-description {
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .card-details {
+            background: #f9fbfd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .detail-item {
+            margin-bottom: 8px;
+            display: flex;
+        }
+        
+        .detail-label {
+            font-weight: 600;
+            min-width: 100px;
+            color: var(--primary);
+        }
+        
+        .context-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .tag {
+            background: #e0eaf5;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .tag.normal { background: #e0f5e9; color: #2e7d32; }
+        .tag.rainy { background: #e3f2fd; color: #1565c0; }
+        .tag.coffee { background: #f3e5f5; color: #6a1b9a; }
+        .tag.sunny { background: #fff8e1; color: #f57f17; }
+        .tag.sick { background: #ffebee; color: #c62828; }
+        .tag.bedtime { background: #e8eaf6; color: #283593; }
+        .tag.playtime { background: #e0f7fa; color: #00838f; }
+        .tag.meal { background: #f1f8e9; color: #558b2f; }
+        .tag.diaper { background: #fce4ec; color: #ad1457; }
+        
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            color: #777;
+            border-top: 1px solid #eee;
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px;
+            font-size: 1.2rem;
+            color: #777;
+        }
+        
+        @media (max-width: 768px) {
+            .filters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .activities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">👶</div>
+                <h1>Kid Activity Finder</h1>
+            </div>
+            <p class="subtitle">Never run out of fun ideas for your little ones! Our app instantly generates engaging activities based on your current situation.</p>
+            <button class="cta-button">Get the App</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="filters-section">
+            <h2>Find the Perfect Activity</h2>
+            <p style="margin-bottom: 20px; color: #666;">Filter activities by your current situation and needs:</p>
+            
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <h3>Activity Type</h3>
+                    <div class="filter-options" id="context-filters">
+                        <!-- Context filters will be added dynamically -->
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Location</h3>
+                    <div class="filter-options" id="location-filters">
+                        <button class="filter-btn" data-filter="location" data-value="all">All</button>
+                        <button class="filter-btn" data-filter="location" data-value="indoor">Indoor</button>
+                        <button class="filter-btn" data-filter="location" data-value="outdoor">Outdoor</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Duration</h3>
+                    <div class="filter-options" id="duration-filters">
+                        <button class="filter-btn" data-filter="duration" data-value="all">All</button>
+                        <button class="filter-btn" data-filter="duration" data-value="quick">Quick</button>
+                        <button class="filter-btn" data-filter="duration" data-value="medium">Medium</button>
+                    </div>
+                </div>
+                
+                <div class="filter-group">
+                    <h3>Parent Involvement</h3>
+                    <div class="filter-options" id="involvement-filters">
+                        <button class="filter-btn" data-filter="involvement" data-value="all">All</button>
+                        <button class="filter-btn" data-filter="involvement" data-value="minimal">Minimal</button>
+                        <button class="filter-btn" data-filter="involvement" data-value="some">Some</button>
+                        <button class="filter-btn" data-filter="involvement" data-value="active">Active</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="activity-counter">
+            Showing <span id="activity-count">63</span> activities for <strong>0-2 years</strong>
+        </div>
+        
+        <div class="activities-grid" id="activities-container">
+            <!-- Activities will be inserted here by JavaScript -->
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Kid Activity Finder App | Perfect for busy parents | Ages 0-2, 3-5, and 6-11 available</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Sample data - in a real app, this would be loaded from your JSON files
+        const activitiesData = {
+            activities: [
+                {
+                    "id": "1",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "materials": ["none"],
+                    "independent": false,
+                    "duration": "quick",
+                    "cleanup": "no",
+                    "involvement": "active",
+                    "title": "Peek-a-boo with a blanket",
+                    "description": "Hide behind a blanket and pop out saying 'peek-a-boo!' Your little one will giggle with delight every time!",
+                    "benefits": "Develops object permanence, social skills, and cause-and-effect understanding",
+                    "prep": "Just grab any blanket or towel from around the house",
+                    "contexts": ["normal", "rainy", "coffee"],
+                    "energy_required": "low",
+                    "noiseLevel": "quiet",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "2",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "materials": ["none"],
+                    "independent": false,
+                    "duration": "medium",
+                    "cleanup": "easy",
+                    "involvement": "some",
+                    "title": "Sensory bottles",
+                    "description": "Fill empty water bottles with colorful beads, glitter, and water. Seal tightly and let your baby shake, roll, and explore the mesmerizing movement!",
+                    "benefits": "Stimulates visual tracking, sensory processing, and focus",
+                    "prep": "Collect clear plastic bottles, small colorful items, and glue for sealing",
+                    "contexts": ["normal", "rainy", "sick"],
+                    "energy_required": "low",
+                    "noiseLevel": "quiet",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "6",
+                    "ageGroup": "0-2",
+                    "location": "outdoor",
+                    "materials": ["none"],
+                    "independent": false,
+                    "duration": "quick",
+                    "cleanup": "no",
+                    "involvement": "active",
+                    "title": "Bubble chasing",
+                    "description": "Blow streams of bubbles and encourage your toddler to chase and pop them. Celebrate each successful pop with cheers!",
+                    "benefits": "Develops visual tracking, gross motor skills, and coordination",
+                    "prep": "Prepare bubble solution and wand",
+                    "contexts": ["normal", "sunny"],
+                    "energy_required": "medium",
+                    "noiseLevel": "loud",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "13",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "materials": ["kitchen"],
+                    "independent": true,
+                    "duration": "quick",
+                    "cleanup": "easy",
+                    "involvement": "minimal",
+                    "title": "Kitchen drum set",
+                    "description": "Let your baby bang pots and pans with wooden spoons. Show different rhythms and celebrate their musical creations!",
+                    "benefits": "Develops cause-effect understanding, rhythm exploration, and motor skills",
+                    "prep": "Gather unbreakable pots, pans, and spoons",
+                    "contexts": ["normal", "coffee"],
+                    "energy_required": "medium",
+                    "noiseLevel": "loud",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "14",
+                    "ageGroup": "0-2",
+                    "location": "outdoor",
+                    "materials": ["blanket"],
+                    "independent": false,
+                    "duration": "medium",
+                    "cleanup": "no",
+                    "involvement": "active",
+                    "title": "Cloud watching",
+                    "description": "Lie together on a blanket and point out cloud shapes. Create stories about animals and objects you discover!",
+                    "benefits": "Encourages imagination, visual perception, and language skills",
+                    "prep": "Choose a clear day with visible clouds",
+                    "contexts": ["normal", "sunny"],
+                    "energy_required": "low",
+                    "noiseLevel": "quiet",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "29",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "materials": ["none"],
+                    "independent": false,
+                    "duration": "medium",
+                    "cleanup": "no",
+                    "involvement": "active",
+                    "title": "Baby sign language",
+                    "description": "Teach simple signs like 'more,' 'milk,' and 'all done' during meals. Consistently sign while saying the words!",
+                    "benefits": "Reduces frustration, builds communication skills, and cognitive understanding",
+                    "prep": "Learn basic baby signs",
+                    "contexts": ["normal", "meal"],
+                    "energy_required": "low",
+                    "noiseLevel": "quiet",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "35",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "materials": ["none"],
+                    "independent": false,
+                    "duration": "medium",
+                    "cleanup": "no",
+                    "involvement": "active",
+                    "title": "Baby dance party",
+                    "description": "Hold baby and dance to different music styles. Change movements with each song - salsa, rock, waltz!",
+                    "benefits": "Develops rhythm, balance, and cultural sound awareness",
+                    "prep": "Prepare playlist with varied musical styles",
+                    "contexts": ["normal", "rainy"],
+                    "energy_required": "medium",
+                    "noiseLevel": "normal",
+                    "kidCount": "single"
+                },
+                {
+                    "id": "54",
+                    "title": "Water Splash Tray",
+                    "description": "Place baby in high chair with a shallow tray of water and floating toys. Let them splash and explore water properties with supervision.",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "duration": "medium",
+                    "kidCount": "single",
+                    "independent": false,
+                    "involvement": "some",
+                    "cleanup": "easy",
+                    "materials": ["shallow tray", "water", "float toys"],
+                    "benefits": "Develops tactile sensitivity, cause-effect understanding, and motor planning",
+                    "prep": "Use spill-proof tray and small amount of water",
+                    "noiseLevel": "normal",
+                    "contexts": ["normal", "playtime"],
+                    "energy_required": "low"
+                },
+                {
+                    "id": "59",
+                    "title": "Edible Finger Paint",
+                    "description": "Make taste-safe paints from yogurt and food coloring. Let baby create masterpieces on high chair trays.",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "duration": "medium",
+                    "kidCount": "single",
+                    "independent": true,
+                    "involvement": "some",
+                    "cleanup": "messy",
+                    "materials": ["plain yogurt", "food coloring"],
+                    "benefits": "Encourages creativity, color recognition, and fine motor skills",
+                    "prep": "Mix colors in ice cube tray",
+                    "contexts": ["playtime", "meal"],
+                    "energy_required": "low"
+                },
+                {
+                    "id": "63",
+                    "title": "Contact Paper Collage",
+                    "description": "Stick contact paper sticky-side-up and let baby attach lightweight objects (feathers, fabric scraps).",
+                    "ageGroup": "0-2",
+                    "location": "indoor",
+                    "duration": "medium",
+                    "kidCount": "single",
+                    "independent": true,
+                    "involvement": "minimal",
+                    "cleanup": "easy",
+                    "materials": ["contact paper", "lightweight objects"],
+                    "benefits": "Develops fine motor skills, sensory processing, and creativity",
+                    "prep": "Tape contact paper to table",
+                    "noiseLevel": "quiet",
+                    "contexts": ["rainy", "coffee"],
+                    "energy_required": "low"
+                }
+            ]
+        };
+
+        // Extract all unique contexts from activities
+        const allContexts = [...new Set(activitiesData.activities.flatMap(activity => activity.contexts))];
+        
+        // Initialize filters
+        let currentFilters = {
+            context: 'all',
+            location: 'all',
+            duration: 'all',
+            involvement: 'all'
+        };
+        
+        // DOM elements
+        const activitiesContainer = document.getElementById('activities-container');
+        const contextFiltersContainer = document.getElementById('context-filters');
+        const activityCountElement = document.getElementById('activity-count');
+        
+        // Create context filter buttons
+        function createContextFilters() {
+            contextFiltersContainer.innerHTML = '';
+            
+            // Create "All" button
+            const allButton = document.createElement('button');
+            allButton.className = 'filter-btn active';
+            allButton.dataset.filter = 'context';
+            allButton.dataset.value = 'all';
+            allButton.textContent = 'All';
+            allButton.addEventListener('click', handleFilterClick);
+            contextFiltersContainer.appendChild(allButton);
+            
+            // Create buttons for each context
+            allContexts.forEach(context => {
+                const button = document.createElement('button');
+                button.className = 'filter-btn';
+                button.dataset.filter = 'context';
+                button.dataset.value = context;
+                button.textContent = context.charAt(0).toUpperCase() + context.slice(1);
+                button.addEventListener('click', handleFilterClick);
+                contextFiltersContainer.appendChild(button);
+            });
+        }
+        
+        // Filter click handler
+        function handleFilterClick(event) {
+            const filterType = event.target.dataset.filter;
+            const filterValue = event.target.dataset.value;
+            
+            // Update current filters
+            currentFilters[filterType] = filterValue;
+            
+            // Update active state of buttons
+            document.querySelectorAll(`.filter-btn[data-filter="${filterType}"]`).forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Apply filters and render activities
+            filterAndRenderActivities();
+        }
+        
+        // Filter activities based on current filters
+        function filterActivities() {
+            return activitiesData.activities.filter(activity => {
+                // Context filter
+                if (currentFilters.context !== 'all' && !activity.contexts.includes(currentFilters.context)) {
+                    return false;
+                }
+                
+                // Location filter
+                if (currentFilters.location !== 'all' && activity.location !== currentFilters.location) {
+                    return false;
+                }
+                
+                // Duration filter
+                if (currentFilters.duration !== 'all' && activity.duration !== currentFilters.duration) {
+                    return false;
+                }
+                
+                // Involvement filter
+                if (currentFilters.involvement !== 'all' && activity.involvement !== currentFilters.involvement) {
+                    return false;
+                }
+                
+                return true;
+            });
+        }
+        
+        // Render activities
+        function renderActivities(activities) {
+            activitiesContainer.innerHTML = '';
+            
+            if (activities.length === 0) {
+                activitiesContainer.innerHTML = '<div class="no-results">No activities match your filters. Try adjusting your criteria.</div>';
+                return;
+            }
+            
+            activities.forEach(activity => {
+                const card = document.createElement('div');
+                card.className = 'activity-card';
+                
+                // Header with title and metadata
+                const header = document.createElement('div');
+                header.className = 'card-header';
+                header.innerHTML = `
+                    <h3 class="card-title">${activity.title}</h3>
+                    <div class="card-meta">
+                        <span class="meta-item">${activity.duration} ⏱️</span>
+                        <span class="meta-item">${activity.location === 'indoor' ? '🏠 Indoor' : '🌳 Outdoor'}</span>
+                        <span class="meta-item">${activity.involvement} 👪</span>
+                    </div>
+                `;
+                
+                // Body with description and details
+                const body = document.createElement('div');
+                body.className = 'card-body';
+                body.innerHTML = `
+                    <div class="card-description">
+                        <p>${activity.description}</p>
+                    </div>
+                    <div class="card-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Benefits:</span>
+                            <span>${activity.benefits}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Preparation:</span>
+                            <span>${activity.prep}</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Materials:</span>
+                            <span>${activity.materials.join(', ') || 'none'}</span>
+                        </div>
+                    </div>
+                `;
+                
+                // Context tags
+                const tagsContainer = document.createElement('div');
+                tagsContainer.className = 'context-tags';
+                activity.contexts.forEach(context => {
+                    const tag = document.createElement('span');
+                    tag.className = `tag ${context}`;
+                    tag.textContent = context;
+                    tagsContainer.appendChild(tag);
+                });
+                body.appendChild(tagsContainer);
+                
+                // Assemble card
+                card.appendChild(header);
+                card.appendChild(body);
+                activitiesContainer.appendChild(card);
+            });
+        }
+        
+        // Filter and render activities
+        function filterAndRenderActivities() {
+            const filteredActivities = filterActivities();
+            activityCountElement.textContent = filteredActivities.length;
+            renderActivities(filteredActivities);
+        }
+        
+        // Initialize the page
+        function init() {
+            createContextFilters();
+            filterAndRenderActivities();
+            
+            // Add event listeners to all filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', handleFilterClick);
+            });
+        }
+        
+        // Start the app
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
